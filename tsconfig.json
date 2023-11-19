@@ -1,0 +1,46 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "module": "ESNext",
+        "target": "es5",
+        "allowJs": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "checkJs": true,
+        "jsx": "react-jsx",
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "./src/*"
+            ]
+        },
+        "strictNullChecks": true,
+        "types": [
+            "jest",
+            "@testing-library/jest-dom"
+        ]
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    },
+    "include": [
+        "config",
+        "declarations.d.ts",
+        "src/**/*",
+        ".eslintrc.js",
+        "webpack.config.ts",
+        "jest.config.ts",
+    ],
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ],
+    "files": [
+        "src/index.tsx"
+    ],
+}

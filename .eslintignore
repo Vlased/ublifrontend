@@ -1,0 +1,6 @@
+/build
+/node_modules
+/scripts
+/json-server
+webpack.config.ts
+.eslintrc.js

@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.editButton {
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+.editActionsButtonsContainer {
+  display: flex;
+  gap: 10px;
+}

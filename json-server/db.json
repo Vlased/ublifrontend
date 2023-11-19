@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "123"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "First post"
+    },
+    {
+      "id": "2",
+      "title": "Second post"
+    }
+  ],
+  "profile": {
+    "firstName": "Vlad",
+    "lastName": "Riabotynskyi",
+    "age": 19,
+    "currency": "EUR",
+    "country": "United States of America",
+    "city": "Los Angeles",
+    "username": "mainUser",
+    "avatar": "https://www.w3schools.com/w3css/img_avatar3.png"
+  }
+}
