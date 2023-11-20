@@ -1,4 +1,4 @@
 **/node_modules
 **/.loki
-**/build
+/build
 package-lock.json
