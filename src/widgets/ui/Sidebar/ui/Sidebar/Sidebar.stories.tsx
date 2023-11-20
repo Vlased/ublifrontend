@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Theme } from 'app/providers/ThemeProvider'
+import { ReduxDecorator } from 'shared/config/storybook/decorators/ReduxDecorator'
 import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator'
 import { Sidebar } from './Sidebar'
 
@@ -28,3 +29,13 @@ export const Dark: Story = {
 }
 
 Dark.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const LoggedIn: Story = {
+  args: {}
+}
+
+LoggedIn.decorators = [ReduxDecorator({
+  user: {
+    authData: {}
+  }
+})]

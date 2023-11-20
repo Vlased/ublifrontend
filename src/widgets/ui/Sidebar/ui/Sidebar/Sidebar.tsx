@@ -6,6 +6,8 @@ import { ThemeSwitcher } from 'widgets/ui/ThemeSwitcher'
 import styles from './Sidebar.module.scss'
 import { sidebarItemsList } from '../../model/items'
 import SidebarItem from '../SidebarItem/SidebarItem'
+import { useSelector } from 'react-redux'
+import { getAuthData } from '../../../../../entities/User'
 
 interface SidebarProps {
   className?: string
@@ -13,18 +15,21 @@ interface SidebarProps {
 
 export const Sidebar: React.FC<SidebarProps> = memo(({ className = '' }) => {
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false)
+  const auth = useSelector(getAuthData)
 
   const toggleCollapsed = useCallback(() => {
     setIsCollapsed(prevValue => !prevValue)
   }, [])
 
-  const linksItems = useMemo(() => sidebarItemsList.map((item) => (
-    <SidebarItem
-      key={item.path}
-      item={item}
-      isCollapsed={isCollapsed}
-    />
-  )), [isCollapsed])
+  const linksItems = useMemo(() => sidebarItemsList
+    .filter((item) => !item.authOnly || auth)
+    .map((item) => (
+      <SidebarItem
+        key={item.path}
+        item={item}
+        isCollapsed={isCollapsed}
+      />
+    )), [isCollapsed, auth])
 
   return (
     <div
