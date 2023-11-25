@@ -30,5 +30,6 @@
   "No Profile Data Provided": "Інформація Профілю не Отримана",
   "Incorrect FirstName or LastName": "Некоректне Ім'я або Прізвище",
   "Incorrect Country": "Некоректна Країна",
-  "Incorrect Age": "Некоректний Вік"
+  "Incorrect Age": "Некоректний Вік",
+  "Article cannot be found": "Стаття не знайдена"
 }

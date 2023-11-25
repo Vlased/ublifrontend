@@ -1,0 +1,31 @@
+$light-gray: #f0f0f0;
+$medium-gray: #e0e0e0;
+$dark-gray: #c0c0c0;
+$skeleton-animation-duration: 1.5s;
+
+.container {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, $light-gray, $medium-gray, $dark-gray, $medium-gray, $light-gray);
+    background-size: 200% 100%;
+    animation: shimmer $skeleton-animation-duration infinite linear;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
+}
