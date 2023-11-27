@@ -7,7 +7,7 @@ const ArticleDetailsPage = () => {
   const { t } = useTranslation()
   const { id } = useParams()
 
-  if (!id) {
+  if (!id && PROJECT !== 'storybook') {
     return (
       <div>
         {t('Article cannot be found')}

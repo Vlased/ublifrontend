@@ -1,11 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from 'app/providers/ThemeProvider'
-import { Article, ArticleType, ArticleBlockType } from '../../../../entities/Article'
-import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator'
-import { ArticleDetailsPageAsync as ArticleDetailsPage } from './ArticleDetailsPage.async'
-import { ReduxDecorator } from 'shared/config/storybook/decorators/ReduxDecorator'
+import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
+import { Article, ArticleBlockType, ArticleType } from '../../types/article'
+import { fetchArticleById } from './fetchArticleById'
 
-const article: Article = {
+const data: Article = {
   id: '1',
   title: 'JavaScript News',
   subtitle: 'What\'s new in JS in 2023',
@@ -52,43 +49,28 @@ const article: Article = {
   ]
 }
 
-const meta = {
-  title: 'pages/ArticleDetailsPage',
-  component: ArticleDetailsPage,
-  parameters: {
-    layout: 'centered'
-  },
-  tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' }
-  }
-} as Meta<typeof ArticleDetailsPage>
+describe('fetchArticleById', () => {
+  test('successful fetch', async () => {
+    const thunk = new TestAsyncThunk(fetchArticleById)
 
-export default meta
+    thunk.api.get.mockReturnValue(Promise.resolve({
+      data
+    }))
+    const result = await thunk.callThunk(data.id)
 
-type Story = StoryObj<typeof meta>
-
-export const Light: Story = {
-  args: {}
-}
-
-Light.decorators = [
-  ReduxDecorator({
-    articleDetails: {
-      data: article
-    }
+    expect(thunk.api.get).toHaveBeenCalled()
+    expect(result.meta.requestStatus).toBe('fulfilled')
+    expect(result.payload).toEqual(data)
   })
-]
 
-export const Dark: Story = {
-  args: {}
-}
+  test('fetch with error', async () => {
+    const thunk = new TestAsyncThunk(fetchArticleById)
 
-Dark.decorators = [
-  ReduxDecorator({
-    articleDetails: {
-      data: article
-    }
-  }),
-  ThemeDecorator(Theme.DARK)
-]
+    thunk.api.get.mockReturnValue(Promise.resolve({
+      status: 403
+    }))
+    const result = await thunk.callThunk(data.id)
+
+    expect(result.meta.requestStatus).toBe('rejected')
+  })
+})

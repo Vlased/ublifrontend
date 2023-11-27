@@ -1,17 +1,25 @@
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
 import DynamicModuleLoader, { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch'
-import { memo, useEffect } from 'react'
+import { memo, useCallback, useEffect } from 'react'
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
 import { useSelector } from 'react-redux'
 import { getArticleDetailsData, getArticleDetailsError, getArticleDetailsLoading } from '../../model/selectors/getArticleDetails'
-import { Text, TextAlign } from 'shared/ui/Text/Text'
+import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton'
 import styles from './ArticleDetails.module.scss'
+import { Avatar } from 'shared/ui/Avatar/Avatar'
+import EyeIcon from 'shared/assets/icons/eye_icon.svg'
+import CalendarIcon from 'shared/assets/icons/calendar_icon.svg'
+import Icon from 'shared/ui/Icon/Icon'
+import { ArticleBlock, ArticleBlockType } from '../../model/types/article'
+import ArticleTextBlockComponent from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
+import ArticleImageBlockComponent from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
+import ArticleCodeBlockComponent from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
 
 interface ArticleDetailsProps {
-  id: string
+  id?: string
 }
 
 const reducers: ReducersList = {
@@ -25,8 +33,45 @@ export const ArticleDetails: React.FC<ArticleDetailsProps> = memo(({ id }) => {
   const article = useSelector(getArticleDetailsData)
   const error = useSelector(getArticleDetailsError)
 
+  const renderBlock = useCallback((block: ArticleBlock) => {
+    switch (block.type) {
+    case ArticleBlockType.CODE: {
+      return (
+        <ArticleCodeBlockComponent
+          key={block.id}
+          className={styles.block}
+          block={block}
+        />
+      )
+    }
+    case ArticleBlockType.IMAGE: {
+      return (
+        <ArticleImageBlockComponent
+          key={block.id}
+          className={styles.block}
+          block={block}
+        />
+      )
+    }
+    case ArticleBlockType.TEXT: {
+      return (
+        <ArticleTextBlockComponent
+          key={block.id}
+          className={styles.block}
+          block={block}
+        />
+      )
+    }
+    default: {
+      return null
+    }
+    }
+  }, [])
+
   useEffect(() => {
-    dispatch(fetchArticleById(id))
+    if (id !== undefined && PROJECT !== 'storybook') {
+      dispatch(fetchArticleById(id))
+    }
   }, [dispatch, id])
 
   let content
@@ -69,9 +114,43 @@ export const ArticleDetails: React.FC<ArticleDetailsProps> = memo(({ id }) => {
         title={t('An unknown error happened')}
       />
     )
-  } else if (article) {
+  } else {
     content = (
-      <div>ArticleDetails</div>
+      <>
+        <div className={styles.avatarContainer}>
+          <Avatar
+            size={200}
+            src={article?.image}
+            className={styles.avatar}
+          />
+        </div>
+        <Text
+          title={article?.title}
+          className={styles.title}
+          size={TextSize.L}
+        >
+          {article?.subtitle}
+        </Text>
+        <div className={styles.articleInfo}>
+          <Icon
+            Svg={EyeIcon}
+            className={styles.icon}
+          />
+          <Text>
+            {article?.views}
+          </Text>
+        </div>
+        <div className={styles.articleInfo}>
+          <Icon
+            Svg={CalendarIcon}
+            className={styles.icon}
+          />
+          <Text>
+            {article?.createdAt}
+          </Text>
+        </div>
+        {article?.blocks?.map(renderBlock)}
+      </>
     )
   }
 

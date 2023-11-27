@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from 'app/providers/ThemeProvider'
-import { Article, ArticleType, ArticleBlockType } from '../../../../entities/Article'
-import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator'
-import { ArticleDetailsPageAsync as ArticleDetailsPage } from './ArticleDetailsPage.async'
+import { Article, ArticleBlockType, ArticleType } from '../../model/types/article'
 import { ReduxDecorator } from 'shared/config/storybook/decorators/ReduxDecorator'
+import { ArticleDetails } from './ArticleDetails'
+import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator'
+import { Theme } from 'app/providers/ThemeProvider'
 
 const article: Article = {
   id: '1',
@@ -53,8 +53,8 @@ const article: Article = {
 }
 
 const meta = {
-  title: 'pages/ArticleDetailsPage',
-  component: ArticleDetailsPage,
+  title: 'entites/ArticleDetails',
+  component: ArticleDetails,
   parameters: {
     layout: 'centered'
   },
@@ -62,23 +62,21 @@ const meta = {
   argTypes: {
     backgroundColor: { control: 'color' }
   }
-} as Meta<typeof ArticleDetailsPage>
+} as Meta<typeof ArticleDetails>
 
 export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const Light: Story = {
+export const Primary: Story = {
   args: {}
 }
 
-Light.decorators = [
-  ReduxDecorator({
-    articleDetails: {
-      data: article
-    }
-  })
-]
+Primary.decorators = [ReduxDecorator({
+  articleDetails: {
+    data: article
+  }
+})]
 
 export const Dark: Story = {
   args: {}
@@ -92,3 +90,23 @@ Dark.decorators = [
   }),
   ThemeDecorator(Theme.DARK)
 ]
+
+export const Loading: Story = {
+  args: {}
+}
+
+Loading.decorators = [ReduxDecorator({
+  articleDetails: {
+    isLoading: true
+  }
+})]
+
+export const Error: Story = {
+  args: {}
+}
+
+Error.decorators = [ReduxDecorator({
+  articleDetails: {
+    error: 'some error'
+  }
+})]

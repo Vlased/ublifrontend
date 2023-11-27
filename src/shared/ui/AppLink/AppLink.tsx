@@ -22,7 +22,7 @@ export const AppLink: React.FC<AppLinkProps & LinkProps> = memo(({
 }) => {
   return (
     <Link
-      className={classNames([styles[theme], className])}
+      className={classNames([styles.link, styles[theme], className])}
       {...props}>
       {children}
     </Link>

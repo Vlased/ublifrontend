@@ -1,9 +1,23 @@
-interface ArticleTextBlockComponentProps {}
+import { ArticleBlockCode } from '../../model/types/article'
+import { memo } from 'react'
+import { Code } from 'shared/ui/Code/Code'
 
-const ArticleTextBlockComponent: React.FC<ArticleTextBlockComponentProps> = () => {
-  return (
-    <div>ArticleTextBlockComponent</div>
-  )
+interface ArticleCodeBlockComponentProps {
+  className?: string
+  block: ArticleBlockCode
 }
 
-export default ArticleTextBlockComponent
+const ArticleCodeBlockComponent: React.FC<ArticleCodeBlockComponentProps> = memo(({
+  className,
+  block
+}) => {
+  return (
+    <div className={className}>
+      <Code>
+        {block.code}
+      </Code>
+    </div>
+  )
+})
+
+export default ArticleCodeBlockComponent
