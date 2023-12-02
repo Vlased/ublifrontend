@@ -72,13 +72,15 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://www.w3schools.com/w3css/img_avatar3.png"
     },
     {
       "id": "2",
       "username": "admin2",
       "password": "1232",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://miro.medium.com/v2/resize:fit:679/0*ngAthWxOvKZHvsw9"
     }
   ],
   "posts": [

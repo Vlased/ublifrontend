@@ -31,5 +31,7 @@
   "Incorrect FirstName or LastName": "Некоректне Ім'я або Прізвище",
   "Incorrect Country": "Некоректна Країна",
   "Incorrect Age": "Некоректний Вік",
-  "Article cannot be found": "Стаття не знайдена"
+  "Article cannot be found": "Стаття не знайдена",
+  "Comments": "Коментарі",
+  "No comments here": "Коментарі відсутні"
 }

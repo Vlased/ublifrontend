@@ -1,7 +1,7 @@
 import { fetchProfileData } from '../model/services/fetchProfileData/fetchProfileData'
-import { memo, useCallback, useEffect } from 'react'
+import { memo, useCallback } from 'react'
 import DynamicModuleLoader, { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useSelector } from 'react-redux'
 import { getProfileError } from '../model/selectors/getProfileError/getProfileError'
 import { getProfileLoading } from '../model/selectors/getProfileLoading/getProfileLoading'
@@ -16,6 +16,7 @@ import { getProfileValidateErrors } from '../model/selectors/getProfileValidateE
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { ValidateProfileErrors } from '../model/types/profile'
 import { useTranslation } from 'react-i18next'
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 
 const reducers: ReducersList = {
   profile: profileReducer
@@ -70,11 +71,9 @@ const ProfilePage = memo(() => {
     dispatch(profileActions.updateProfile({ country: value }))
   }, [dispatch])
 
-  useEffect(() => {
-    if (PROJECT !== 'storybook') {
-      dispatch(fetchProfileData())
-    }
-  }, [dispatch])
+  useInitialEffect(() => {
+    dispatch(fetchProfileData())
+  })
 
   return (
     <DynamicModuleLoader

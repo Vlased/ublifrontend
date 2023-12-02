@@ -31,5 +31,7 @@
   "Incorrect FirstName or LastName": "Incorrect FirstName or LastName",
   "Incorrect Country": "Incorrect Country",
   "Incorrect Age": "Incorrect Age",
-  "Article cannot be found": "Article cannot be found"
+  "Article cannot be found": "Article cannot be found",
+  "Comments": "Comments",
+  "No comments here": "No comments here"
 }
