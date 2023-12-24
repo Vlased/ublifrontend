@@ -156,7 +156,7 @@ export const ArticleDetails: React.FC<ArticleDetailsProps> = memo(({ id }) => {
   }
 
   return (
-    <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+    <DynamicModuleLoader reducers={reducers}>
       {content}
     </DynamicModuleLoader>
   )

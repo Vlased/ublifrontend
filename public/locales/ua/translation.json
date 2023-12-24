@@ -33,5 +33,7 @@
   "Incorrect Age": "Некоректний Вік",
   "Article cannot be found": "Стаття не знайдена",
   "Comments": "Коментарі",
-  "No comments here": "Коментарі відсутні"
+  "No comments here": "Коментарі відсутні",
+  "Enter comment text": "Введіть текст коментаря",
+  "Send": "Відправити"
 }

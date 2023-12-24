@@ -17,6 +17,7 @@ import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { ValidateProfileErrors } from '../model/types/profile'
 import { useTranslation } from 'react-i18next'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
+import { useParams } from 'react-router-dom'
 
 const reducers: ReducersList = {
   profile: profileReducer
@@ -24,6 +25,7 @@ const reducers: ReducersList = {
 
 const ProfilePage = memo(() => {
   const { t } = useTranslation()
+  const { id } = useParams()
   const dispatch = useAppDispatch()
   const formData = useSelector(getProfileForm)
   const error = useSelector(getProfileError)
@@ -72,14 +74,11 @@ const ProfilePage = memo(() => {
   }, [dispatch])
 
   useInitialEffect(() => {
-    dispatch(fetchProfileData())
+    dispatch(fetchProfileData(id))
   })
 
   return (
-    <DynamicModuleLoader
-      reducers={reducers}
-      removeAfterUnmount
-    >
+    <DynamicModuleLoader reducers={reducers}>
       <ProfilePageHeader />
       {validateErrors?.map((validateError) => (
         <Text

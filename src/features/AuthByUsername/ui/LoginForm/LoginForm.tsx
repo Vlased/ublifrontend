@@ -50,10 +50,7 @@ const LoginForm: React.FC<LoginFormProps> = memo(({
   }, [dispatch, onSuccess, username, password])
 
   return (
-    <DynamicModuleLoader
-      reducers={initialReducers}
-      removeAfterUnmount
-    >
+    <DynamicModuleLoader reducers={initialReducers}>
       <div className={styles.loginForm}>
         <Text title="Authorization" />
         <Input

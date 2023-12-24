@@ -6,6 +6,7 @@ import { NavigateFunction } from 'react-router-dom'
 import { ProfileSchema } from 'pages/ProfilePage/model/types/profile'
 import { ArticleDetailsSchema } from '../../../../entities/Article'
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
+import { AddCommentFormSchema } from 'features/AddCommentForm'
 
 export interface StateSchema {
   user: UserSchema
@@ -15,6 +16,7 @@ export interface StateSchema {
   profile?: ProfileSchema
   articleDetails?: ArticleDetailsSchema
   articleDetailsComments?: ArticleDetailsCommentsSchema
+  addCommentForm?: AddCommentFormSchema
 }
 
 export type StateSchemaKey = keyof StateSchema
