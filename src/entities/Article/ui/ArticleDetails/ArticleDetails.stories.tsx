@@ -53,7 +53,7 @@ const article: Article = {
 }
 
 const meta = {
-  title: 'entites/ArticleDetails',
+  title: 'entities/ArticleDetails',
   component: ArticleDetails,
   parameters: {
     layout: 'centered'

@@ -4,7 +4,7 @@ import { Currency } from '../../../Currency'
 import { ProfileCard } from './ProfileCard'
 
 const meta = {
-  title: 'entites/ProfileCard',
+  title: 'entities/ProfileCard',
   component: ProfileCard,
   parameters: {
     layout: 'centered'

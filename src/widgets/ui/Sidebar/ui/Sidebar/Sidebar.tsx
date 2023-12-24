@@ -4,10 +4,10 @@ import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button'
 import { LangSwitcher } from 'widgets/ui/LangSwitcher'
 import { ThemeSwitcher } from 'widgets/ui/ThemeSwitcher'
 import styles from './Sidebar.module.scss'
-import { sidebarItemsList } from '../../model/items'
 import SidebarItem from '../SidebarItem/SidebarItem'
 import { useSelector } from 'react-redux'
 import { getAuthData } from '../../../../../entities/User'
+import { getSidebarItems } from '../../model/selectors/getSidebarItems'
 
 interface SidebarProps {
   className?: string
@@ -16,6 +16,7 @@ interface SidebarProps {
 export const Sidebar: React.FC<SidebarProps> = memo(({ className = '' }) => {
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false)
   const auth = useSelector(getAuthData)
+  const sidebarItemsList = useSelector(getSidebarItems)
 
   const toggleCollapsed = useCallback(() => {
     setIsCollapsed(prevValue => !prevValue)
@@ -29,7 +30,7 @@ export const Sidebar: React.FC<SidebarProps> = memo(({ className = '' }) => {
         item={item}
         isCollapsed={isCollapsed}
       />
-    )), [isCollapsed, auth])
+    )), [isCollapsed, auth, sidebarItemsList])
 
   return (
     <div
