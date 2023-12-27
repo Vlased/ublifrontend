@@ -12,6 +12,11 @@ const article: Article = {
   image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png',
   views: 1022,
   createdAt: '26.06.2023',
+  user: {
+    id: '1',
+    username: 'admin',
+    avatar: 'https://www.w3schools.com/w3css/img_avatar3.png'
+  },
   type: [ArticleType.IT],
   blocks: [
     {
