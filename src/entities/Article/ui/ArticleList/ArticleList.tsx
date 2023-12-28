@@ -41,20 +41,17 @@ const ArticleList: React.FC<ArticleListProps> = ({
     )
   }, [view])
 
-  if (isLoading) {
-    return (
-      <div className={classNames([styles[view], className])}>
-        {getSkeletons(view)}
-      </div>
-    )
-  }
-
   return (
     <div className={classNames([styles[view], className])}>
       {articles.length
         ? articles.map(renderArticle)
         : null
       }
+      {isLoading && (
+        <div className={classNames([styles[view], className])}>
+          {getSkeletons(view)}
+        </div>
+      )}
     </div>
   )
 }

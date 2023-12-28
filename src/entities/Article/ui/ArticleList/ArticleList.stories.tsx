@@ -113,7 +113,7 @@ DarkGrid.decorators = [ThemeDecorator(Theme.DARK)]
 
 export const LoadingList: Story = {
   args: {
-    articles,
+    articles: [],
     isLoading: true,
     view: ArticleView.LIST
   }
@@ -121,7 +121,7 @@ export const LoadingList: Story = {
 
 export const LoadingGrid: Story = {
   args: {
-    articles,
+    articles: [],
     isLoading: true
   }
 }

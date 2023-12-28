@@ -15,7 +15,7 @@ const defaultAsyncReducers: ReducersList = {
   articleDetails: articleDetailsReducer,
   addCommentForm: addCommentFormReducer,
   articleDetailsComments: articleDetailsCommentsReducer,
-  articlesPage: articlesPageReducer,
+  articlesPage: articlesPageReducer
 }
 
 export const ReduxDecorator = (

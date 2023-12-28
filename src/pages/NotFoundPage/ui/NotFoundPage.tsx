@@ -1,11 +1,15 @@
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
+import Page from 'shared/ui/Page/Page'
 import styles from './NotFoundPage.module.scss'
 
 const NotFoundPage = memo(() => {
   const { t } = useTranslation()
+
   return (
-    <div className={styles.notFoundPage}>{t('Page cannot be found')}</div>
+    <Page className={styles.notFoundPage}>
+      {t('Page cannot be found')}
+    </Page>
   )
 })
 

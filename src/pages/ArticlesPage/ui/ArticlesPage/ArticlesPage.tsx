@@ -8,6 +8,8 @@ import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchA
 import { useSelector } from 'react-redux'
 import { getArticlesPageLoading, getArticlesPageView } from '../../model/selectors/articlesPageSelectors'
 import ArticleViewSwitch from 'features/ArticleViewSwitch/ArticleViewSwitch'
+import Page from 'shared/ui/Page/Page'
+import { fetchNextArticlesPage } from 'pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage'
 
 const reducers: ReducersList = {
   articlesPage: articlesPageReducer
@@ -20,25 +22,33 @@ const ArticlesPage = () => {
   const isLoading = useSelector(getArticlesPageLoading)
 
   useInitialEffect(() => {
-    dispatch(fetchArticlesList())
     dispatch(articlesPageActions.initState())
+    dispatch(fetchArticlesList({
+      page: 1
+    }))
   })
 
-  const handleViewChange = useCallback((view: ArticleView) => {
-    dispatch(articlesPageActions.setView(view))
+  const handleViewChange = useCallback((newView: ArticleView) => {
+    dispatch(articlesPageActions.setView(newView))
+  }, [dispatch])
+
+  const handleNextPartLoading = useCallback(() => {
+    dispatch(fetchNextArticlesPage())
   }, [dispatch])
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <ArticleViewSwitch
-        view={view}
-        handleViewChange={handleViewChange}
-      />
-      <ArticleList
-        articles={articles}
-        view={view}
-        isLoading={isLoading}
-      />
+      <Page handleEndScroll={handleNextPartLoading}>
+        <ArticleViewSwitch
+          view={view}
+          handleViewChange={handleViewChange}
+        />
+        <ArticleList
+          articles={articles}
+          view={view}
+          isLoading={isLoading}
+        />
+      </Page>
     </DynamicModuleLoader>
   )
 }

@@ -18,6 +18,7 @@ import { ValidateProfileErrors } from '../model/types/profile'
 import { useTranslation } from 'react-i18next'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { useParams } from 'react-router-dom'
+import Page from 'shared/ui/Page/Page'
 
 const reducers: ReducersList = {
   profile: profileReducer
@@ -79,29 +80,31 @@ const ProfilePage = memo(() => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <ProfilePageHeader />
-      {validateErrors?.map((validateError) => (
-        <Text
-          theme={TextTheme.ERROR}
-          key={validateError}
-        >
-          {validateErrorsTranslates[validateError]}
-        </Text>
-      ))}
-      <ProfileCard
-        formData={formData}
-        error={error}
-        isLoading={isLoading}
-        readonly={readonly}
-        handleFirstNameChange={handleFirstNameChange}
-        handleLastNameChange={handleLastNameChange}
-        handleAgeChange={handleAgeChange}
-        handleCityChange={handleCityChange}
-        handleUsernameChange={handleUsernameChange}
-        handleAvatarChange={handleAvatarChange}
-        handleCurrencyChange={handleCurrencyChange}
-        handleCountryChange={handleCountryChange}
-      />
+      <Page>
+        <ProfilePageHeader />
+        {validateErrors?.map((validateError) => (
+          <Text
+            theme={TextTheme.ERROR}
+            key={validateError}
+          >
+            {validateErrorsTranslates[validateError]}
+          </Text>
+        ))}
+        <ProfileCard
+          formData={formData}
+          error={error}
+          isLoading={isLoading}
+          readonly={readonly}
+          handleFirstNameChange={handleFirstNameChange}
+          handleLastNameChange={handleLastNameChange}
+          handleAgeChange={handleAgeChange}
+          handleCityChange={handleCityChange}
+          handleUsernameChange={handleUsernameChange}
+          handleAvatarChange={handleAvatarChange}
+          handleCurrencyChange={handleCurrencyChange}
+          handleCountryChange={handleCountryChange}
+        />
+      </Page>
     </DynamicModuleLoader>
   )
 })

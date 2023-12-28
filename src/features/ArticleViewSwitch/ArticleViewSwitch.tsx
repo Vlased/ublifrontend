@@ -25,8 +25,11 @@ const viewTypes = [
 
 const ArticleViewSwitch: React.FC<ArticleViewSwitchProps> = ({ view, handleViewChange }) => {
   const onChangeView = useCallback((newView: ArticleView) => () => {
+    if (newView === view) {
+      return
+    }
     handleViewChange(newView)
-  }, [handleViewChange])
+  }, [handleViewChange, view])
 
   return (
     <div className={styles.container}>
