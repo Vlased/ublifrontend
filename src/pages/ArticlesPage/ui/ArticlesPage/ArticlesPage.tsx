@@ -1,15 +1,15 @@
-import { ArticleList, ArticleView } from '../../../../entities/Article'
-import { memo, useCallback } from 'react'
-import DynamicModuleLoader, { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
-import { articlesPageActions, articlesPageReducer, getArticlesPage } from '../../model/slice/articlesPageSlice'
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
-import { useSelector } from 'react-redux'
-import { getArticlesPageLoading, getArticlesPageView } from '../../model/selectors/articlesPageSelectors'
 import ArticleViewSwitch from 'features/ArticleViewSwitch/ArticleViewSwitch'
+import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage'
+import { memo, useCallback } from 'react'
+import { useSelector } from 'react-redux'
+import DynamicModuleLoader, { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import Page from 'shared/ui/Page/Page'
-import { fetchNextArticlesPage } from 'pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage'
+import { ArticleList, ArticleView } from '../../../../entities/Article'
+import { getArticlesPageLoading, getArticlesPageView } from '../../model/selectors/articlesPageSelectors'
+import { articlesPageActions, articlesPageReducer, getArticlesPage } from '../../model/slice/articlesPageSlice'
 
 const reducers: ReducersList = {
   articlesPage: articlesPageReducer
@@ -22,10 +22,7 @@ const ArticlesPage = () => {
   const isLoading = useSelector(getArticlesPageLoading)
 
   useInitialEffect(() => {
-    dispatch(articlesPageActions.initState())
-    dispatch(fetchArticlesList({
-      page: 1
-    }))
+    dispatch(initArticlesPage())
   })
 
   const handleViewChange = useCallback((newView: ArticleView) => {
@@ -37,7 +34,10 @@ const ArticlesPage = () => {
   }, [dispatch])
 
   return (
-    <DynamicModuleLoader reducers={reducers}>
+    <DynamicModuleLoader
+      reducers={reducers}
+      removeAfterUnmount={false}
+    >
       <Page handleEndScroll={handleNextPartLoading}>
         <ArticleViewSwitch
           view={view}
