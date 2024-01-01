@@ -77,6 +77,7 @@ module.exports = module.exports = {
       }
     ],
    "@typescript-eslint/no-invalid-void-type": 'off',
-   "@typescript-eslint/no-empty-interface": 'off'
+   "@typescript-eslint/no-empty-interface": 'off',
+   'n/no-callback-literal': 'off',
   }
 }

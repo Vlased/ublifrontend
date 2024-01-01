@@ -3,6 +3,7 @@ import { userReducer } from '../../../../entities/User'
 import { StateSchema } from './StateSchema'
 import { createReducerManager } from './reducerManager'
 import { $api } from 'shared/api/api'
+import { scrollRestorationReducer } from 'features/ScrollRestoration'
 
 export const createReduxStore = (
   initialState?: StateSchema,
@@ -10,7 +11,9 @@ export const createReduxStore = (
 ) => {
   const rootReducers: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
-    user: userReducer
+
+    user: userReducer,
+    scrollRestoration: scrollRestorationReducer
   }
 
   const reducerManager = createReducerManager(rootReducers)
