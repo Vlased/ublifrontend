@@ -64,7 +64,6 @@ module.exports = module.exports = {
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
     'i18next/no-literal-string': 'off',
-    // 'i18next/no-literal-string': ['error', { 'markupOnly': true }],
     '@typescript-eslint/consistent-type-assertions': 'off',
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",

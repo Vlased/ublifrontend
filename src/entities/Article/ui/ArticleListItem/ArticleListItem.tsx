@@ -1,31 +1,27 @@
-import { Article, ArticleBlockText, ArticleBlockType, ArticleView } from '../../model/types/article'
-import React, { useCallback } from 'react'
-import styles from './ArticleListItem.module.scss'
-import { Text } from 'shared/ui/Text/Text'
-import Icon from 'shared/ui/Icon/Icon'
+import React from 'react'
+import { useTranslation } from 'react-i18next'
 import EyeIcon from 'shared/assets/icons/eye_icon.svg'
-import { Card } from 'shared/ui/Card/Card'
+import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { classNames } from 'shared/lib/classNames/classNames'
+import { AppLink } from 'shared/ui/AppLink/AppLink'
 import { Avatar } from 'shared/ui/Avatar/Avatar'
 import { Button } from 'shared/ui/Button/Button'
-import { useTranslation } from 'react-i18next'
+import { Card } from 'shared/ui/Card/Card'
+import Icon from 'shared/ui/Icon/Icon'
+import { Text } from 'shared/ui/Text/Text'
+import { Article, ArticleBlockText, ArticleBlockType, ArticleView } from '../../model/types/article'
 import ArticleTextBlockComponent from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
-import { useNavigate } from 'react-router-dom'
-import { RoutePath } from 'shared/config/routeConfig/routeConfig'
+import styles from './ArticleListItem.module.scss'
 
 interface ArticleListItemProps {
   className?: string
   article: Article
   view: ArticleView
+  target?: React.HTMLAttributeAnchorTarget
 }
 
-const ArticleListItem: React.FC<ArticleListItemProps> = ({ className, article, view }) => {
+const ArticleListItem: React.FC<ArticleListItemProps> = ({ className, article, view, target }) => {
   const { t } = useTranslation()
-  const navigate = useNavigate()
-
-  const handleOpenArticle = useCallback(() => {
-    navigate(RoutePath.article_details + article.id)
-  }, [navigate, article.id])
 
   const types = (
     <Text className={styles.types}>
@@ -84,9 +80,14 @@ const ArticleListItem: React.FC<ArticleListItemProps> = ({ className, article, v
             />
           )}
           <div className={styles.footer}>
-            <Button onClick={handleOpenArticle}>
-              {t('Read more...')}
-            </Button>
+            <AppLink
+              to={RoutePath.article_details + article.id}
+              target={target}
+            >
+              <Button>
+                {t('Read more...')}
+              </Button>
+            </AppLink>
             {views}
           </div>
         </Card>
@@ -95,8 +96,12 @@ const ArticleListItem: React.FC<ArticleListItemProps> = ({ className, article, v
   }
 
   return (
-    <div className={classNames([styles[view], className])}>
-      <Card onClick={handleOpenArticle}>
+    <AppLink
+      className={classNames([styles[view], className])}
+      to={RoutePath.article_details + article.id}
+      target={target}
+    >
+      <Card>
         <div className={styles.imageWrapper}>
           {image}
           <Text className={styles.date}>
@@ -111,7 +116,7 @@ const ArticleListItem: React.FC<ArticleListItemProps> = ({ className, article, v
           {article.title}
         </Text>
       </Card>
-    </div>
+    </AppLink>
   )
 }
 

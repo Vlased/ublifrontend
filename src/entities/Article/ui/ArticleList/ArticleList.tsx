@@ -1,16 +1,17 @@
-import { Article, ArticleView } from '../../model/types/article'
 import React, { useCallback } from 'react'
-import ArticleListItem from '../ArticleListItem/ArticleListItem'
-import styles from './ArticleList.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames'
-import ArticleListItemSkeleton from '../ArticleListItem/ArticleListItemSkeleton'
 import { Text, TextSize } from 'shared/ui/Text/Text'
+import { Article, ArticleView } from '../../model/types/article'
+import ArticleListItem from '../ArticleListItem/ArticleListItem'
+import ArticleListItemSkeleton from '../ArticleListItem/ArticleListItemSkeleton'
+import styles from './ArticleList.module.scss'
 
 interface ArticleListProps {
   className?: string
   articles: Article[]
   isLoading?: boolean
   view?: ArticleView
+  target?: React.HTMLAttributeAnchorTarget
 }
 
 const getSkeletons = (view: ArticleView) => (
@@ -29,7 +30,8 @@ const ArticleList: React.FC<ArticleListProps> = ({
   className,
   articles,
   isLoading,
-  view = ArticleView.GRID
+  view = ArticleView.GRID,
+  target
 }) => {
   const renderArticle = useCallback((article: Article) => {
     return (
@@ -37,9 +39,10 @@ const ArticleList: React.FC<ArticleListProps> = ({
         key={article.id}
         article={article}
         view={view}
+        target={target}
       />
     )
-  }, [view])
+  }, [view, target])
 
   if (!isLoading && !articles.length) {
     return (
