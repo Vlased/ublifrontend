@@ -2,7 +2,7 @@ import { Currency } from '../../model/types/currency'
 import { Select, SelectOptionType } from 'shared/ui/Select/Select'
 import { memo, useCallback } from 'react'
 
-const currencyOptions: SelectOptionType[] = [
+const currencyOptions: Array<SelectOptionType<Currency>> = [
   {
     value: Currency.EUR,
     content: Currency.EUR

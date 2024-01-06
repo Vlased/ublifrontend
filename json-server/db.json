@@ -51,736 +51,218 @@
     },
     {
       "id": "2",
-      "title": "JavaScript News",
-      "subtitle": "What's new in JS in 2023",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png",
-      "views": 1022,
-      "createdAt": "26.06.2023",
+      "title": "Python for Data Science",
+      "subtitle": "Exploring the power of Python in data analysis",
+      "image": "https://www.python.org/static/community_logos/python-logo-master-v3-TM.png",
+      "views": 1500,
+      "createdAt": "15.09.2023",
       "userId": "2",
       "type": [
-        "IT"
+        "Data Science",
+        "Programming"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block title",
+          "title": "Introduction to Python for Data Science",
           "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString()).",
-            "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs that are specific to Web pages, please see Web APIs and DOM."
+            "Python is a versatile programming language that has gained popularity in the field of data science. This article explores the key features of Python and its applications in data analysis.",
+            "With a rich ecosystem of libraries like NumPy, Pandas, and Matplotlib, Python provides powerful tools for data manipulation, analysis, and visualization. Whether you're a beginner or an experienced programmer, Python is a valuable asset in the world of data science."
           ]
         },
         {
           "id": "2",
           "type": "CODE",
-          "code": "console.log('Hello world!');"
+          "code": "import pandas as pd\nimport numpy as np\n\n# Load dataset\ndata = pd.read_csv('dataset.csv')\n\n# Analyze data\nmean_value = np.mean(data['column'])\nprint('Mean:', mean_value)"
         },
         {
           "id": "3",
           "type": "TEXT",
-          "title": "This 2 block title",
+          "title": "Data Visualization with Matplotlib",
           "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString())."
+            "Matplotlib is a popular data visualization library in Python. In this section, we'll explore how to create insightful visualizations using Matplotlib.",
+            "From basic line charts to complex heatmaps, Matplotlib allows data scientists to convey their findings effectively. The combination of Python and Matplotlib empowers analysts to present data-driven insights in a visually appealing manner."
           ]
         },
         {
           "id": "4",
           "type": "IMAGE",
-          "src": "https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png",
-          "title": "Image number 1"
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "var http = require('http');\nhttp.createServer(function (req, res) {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello World!');\n}).listen(8080);"
+          "src": "https://matplotlib.org/stable/_images/sphx_glr_scatter_001.png",
+          "title": "Scatter Plot Example"
         }
       ]
     },
     {
       "id": "3",
-      "title": "JavaScript News",
-      "subtitle": "What's new in JS in 2023",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png",
-      "views": 1022,
-      "createdAt": "26.06.2023",
+      "title": "Introduction to Machine Learning",
+      "subtitle": "A beginner's guide to understanding ML concepts",
+      "image": "https://miro.medium.com/v2/resize:fit:1358/1*cG6U1qstYDijh9bPL42e-Q.jpeg",
+      "views": 800,
+      "createdAt": "05.11.2023",
       "userId": "1",
       "type": [
-        "IT"
+        "Machine Learning",
+        "Technology"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block title",
+          "title": "What is Machine Learning?",
           "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString()).",
-            "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs that are specific to Web pages, please see Web APIs and DOM."
+            "Machine Learning (ML) is a subset of artificial intelligence that focuses on building systems capable of learning from data. In this article, we'll explore the fundamental concepts behind machine learning and its real-world applications.",
+            "ML algorithms enable computers to learn patterns and make decisions without explicit programming. From predictive analytics to recommendation systems, machine learning is revolutionizing various industries."
           ]
         },
         {
           "id": "2",
           "type": "CODE",
-          "code": "console.log('Hello world!');"
+          "code": "from sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\n\n# Load dataset\nX, y = load_dataset()\n\n# Split data\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)\n\n# Train model\nmodel = LinearRegression()\nmodel.fit(X_train, y_train)"
         },
         {
           "id": "3",
           "type": "TEXT",
-          "title": "This 2 block title",
+          "title": "Types of Machine Learning",
           "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString())."
+            "Machine Learning can be categorized into three main types: supervised learning, unsupervised learning, and reinforcement learning. Each type has its own set of algorithms and applications.",
+            "Whether it's predicting stock prices or clustering customer data, understanding the types of machine learning is essential for anyone entering the field of data science."
           ]
         },
         {
           "id": "4",
           "type": "IMAGE",
-          "src": "https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png",
-          "title": "Image number 1"
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "var http = require('http');\nhttp.createServer(function (req, res) {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello World!');\n}).listen(8080);"
+          "src": "https://miro.medium.com/v2/resize:fit:1358/1*cG6U1qstYDijh9bPL42e-Q.jpeg",
+          "title": "Machine Learning Concepts"
         }
       ]
     },
     {
       "id": "4",
-      "title": "JavaScript News",
-      "subtitle": "What's new in JS in 2023",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png",
-      "views": 1022,
-      "createdAt": "26.06.2023",
+      "title": "Web Development Trends in 2024",
+      "subtitle": "Exploring the latest trends shaping the web development landscape",
+      "image": "data:image/jpeg;base64,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",
+      "views": 1200,
+      "createdAt": "20.02.2024",
       "userId": "2",
       "type": [
-        "IT"
+        "Web Development",
+        "Technology"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block title",
+          "title": "The Evolving Web Development Landscape",
           "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString()).",
-            "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs that are specific to Web pages, please see Web APIs and DOM."
+            "Web development is a dynamic field, constantly evolving to meet the demands of users and technological advancements. In this article, we'll explore the latest trends shaping the web development landscape in 2024.",
+            "From the rise of progressive web apps to the adoption of serverless architecture, developers are embracing new paradigms to build faster, more scalable, and user-friendly web applications."
           ]
         },
         {
           "id": "2",
           "type": "CODE",
-          "code": "console.log('Hello world!');"
+          "code": "npm install -g @vue/cli\nvue create my-web-app\n\n# Develop with Vue.js\nvue serve"
         },
         {
           "id": "3",
           "type": "TEXT",
-          "title": "This 2 block title",
+          "title": "Progressive Web Apps (PWAs)",
           "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString())."
+            "Progressive Web Apps (PWAs) are a hot topic in web development. These applications offer a seamless user experience by combining the best features of web and mobile apps. PWAs are reliable, fast, and engaging, making them a popular choice for modern developers."
           ]
         },
         {
           "id": "4",
           "type": "IMAGE",
-          "src": "https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png",
-          "title": "Image number 1"
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "var http = require('http');\nhttp.createServer(function (req, res) {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello World!');\n}).listen(8080);"
+          "src": "data:image/jpeg;base64,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",
+          "title": "Progressive Web Apps"
         }
       ]
     },
     {
       "id": "5",
-      "title": "JavaScript News",
-      "subtitle": "What's new in JS in 2023",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png",
-      "views": 1022,
-      "createdAt": "26.06.2023",
+      "title": "Cybersecurity Best Practices for Businesses",
+      "subtitle": "Protecting your organization from online threats",
+      "image": "data:image/jpeg;base64,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",
+      "views": 900,
+      "createdAt": "10.04.2024",
       "userId": "1",
       "type": [
-        "IT"
+        "Cybersecurity",
+        "Business"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block title",
+          "title": "The Importance of Cybersecurity",
           "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString()).",
-            "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs that are specific to Web pages, please see Web APIs and DOM."
+            "In an era of digital transformation, cybersecurity is paramount for businesses of all sizes. This article highlights the importance of implementing robust cybersecurity measures to protect sensitive data and maintain the trust of customers.",
+            "From ransomware attacks to phishing attempts, businesses face a variety of online threats. Understanding and implementing cybersecurity best practices is crucial for safeguarding your organization's digital assets."
           ]
         },
         {
           "id": "2",
           "type": "CODE",
-          "code": "console.log('Hello world!');"
+          "code": "firewall-cmd --zone=public --add-port=22/tcp --permanent\nfirewall-cmd --reload"
         },
         {
           "id": "3",
           "type": "TEXT",
-          "title": "This 2 block title",
+          "title": "Securing Networks and Systems",
           "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString())."
+            "Securing networks and systems is a multifaceted task that involves implementing firewalls, intrusion detection systems, and regular security audits. Organizations should also educate employees about potential threats and promote a culture of cybersecurity awareness."
           ]
         },
         {
           "id": "4",
           "type": "IMAGE",
-          "src": "https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png",
-          "title": "Image number 1"
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "var http = require('http');\nhttp.createServer(function (req, res) {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello World!');\n}).listen(8080);"
+          "src": "data:image/jpeg;base64,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",
+          "title": "Cybersecurity Best Practices"
         }
       ]
     },
     {
       "id": "6",
-      "title": "JavaScript News",
-      "subtitle": "What's new in JS in 2023",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png",
-      "views": 1022,
-      "createdAt": "26.06.2023",
+      "title": "The Future of Artificial Intelligence",
+      "subtitle": "Exploring the advancements and potential impact of AI",
+      "image": "https://imageio.forbes.com/specials-images/imageserve/643016813686d8eafca00875//960x0.jpg?height=473&width=711&fit=bounds",
+      "views": 1800,
+      "createdAt": "02.08.2024",
       "userId": "2",
       "type": [
-        "IT"
+        "Artificial Intelligence",
+        "Technology"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block title",
+          "title": "AI's Evolution and Impact",
           "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString()).",
-            "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs that are specific to Web pages, please see Web APIs and DOM."
+            "Artificial Intelligence (AI) continues to evolve, influencing various aspects of our lives. This article delves into the recent advancements in AI and its potential impact on industries, society, and everyday tasks.",
+            "From machine learning algorithms powering recommendation systems to AI-driven automation in manufacturing, the applications of artificial intelligence are vast and transformative."
           ]
         },
         {
           "id": "2",
           "type": "CODE",
-          "code": "console.log('Hello world!');"
+          "code": "import tensorflow as tf\nfrom tensorflow.keras.models import Sequential\nfrom tensorflow.keras.layers import Dense\n\n# Build a simple neural network\nmodel = Sequential()\nmodel.add(Dense(units=64, activation='relu', input_dim=100))\nmodel.add(Dense(units=10, activation='softmax'))"
         },
         {
           "id": "3",
           "type": "TEXT",
-          "title": "This 2 block title",
+          "title": "Ethical Considerations in AI Development",
           "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString())."
+            "As AI technologies advance, ethical considerations become increasingly important. Developers and organizations must prioritize responsible AI development, addressing issues such as bias, transparency, and accountability."
           ]
         },
         {
           "id": "4",
           "type": "IMAGE",
-          "src": "https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png",
-          "title": "Image number 1"
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "var http = require('http');\nhttp.createServer(function (req, res) {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello World!');\n}).listen(8080);"
-        }
-      ]
-    },
-    {
-      "id": "7",
-      "title": "JavaScript News",
-      "subtitle": "What's new in JS in 2023",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png",
-      "views": 1022,
-      "createdAt": "26.06.2023",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "This block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString()).",
-            "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs that are specific to Web pages, please see Web APIs and DOM."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "CODE",
-          "code": "console.log('Hello world!');"
-        },
-        {
-          "id": "3",
-          "type": "TEXT",
-          "title": "This 2 block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString())."
-          ]
-        },
-        {
-          "id": "4",
-          "type": "IMAGE",
-          "src": "https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png",
-          "title": "Image number 1"
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "var http = require('http');\nhttp.createServer(function (req, res) {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello World!');\n}).listen(8080);"
-        }
-      ]
-    },
-    {
-      "id": "8",
-      "title": "JavaScript News",
-      "subtitle": "What's new in JS in 2023",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png",
-      "views": 1022,
-      "createdAt": "26.06.2023",
-      "userId": "2",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "This block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString()).",
-            "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs that are specific to Web pages, please see Web APIs and DOM."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "CODE",
-          "code": "console.log('Hello world!');"
-        },
-        {
-          "id": "3",
-          "type": "TEXT",
-          "title": "This 2 block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString())."
-          ]
-        },
-        {
-          "id": "4",
-          "type": "IMAGE",
-          "src": "https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png",
-          "title": "Image number 1"
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "var http = require('http');\nhttp.createServer(function (req, res) {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello World!');\n}).listen(8080);"
-        }
-      ]
-    },
-    {
-      "id": "9",
-      "title": "JavaScript News",
-      "subtitle": "What's new in JS in 2023",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png",
-      "views": 1022,
-      "createdAt": "26.06.2023",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "This block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString()).",
-            "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs that are specific to Web pages, please see Web APIs and DOM."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "CODE",
-          "code": "console.log('Hello world!');"
-        },
-        {
-          "id": "3",
-          "type": "TEXT",
-          "title": "This 2 block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString())."
-          ]
-        },
-        {
-          "id": "4",
-          "type": "IMAGE",
-          "src": "https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png",
-          "title": "Image number 1"
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "var http = require('http');\nhttp.createServer(function (req, res) {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello World!');\n}).listen(8080);"
-        }
-      ]
-    },
-    {
-      "id": "10",
-      "title": "JavaScript News",
-      "subtitle": "What's new in JS in 2023",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png",
-      "views": 1022,
-      "createdAt": "26.06.2023",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "This block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString()).",
-            "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs that are specific to Web pages, please see Web APIs and DOM."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "CODE",
-          "code": "console.log('Hello world!');"
-        },
-        {
-          "id": "3",
-          "type": "TEXT",
-          "title": "This 2 block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString())."
-          ]
-        },
-        {
-          "id": "4",
-          "type": "IMAGE",
-          "src": "https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png",
-          "title": "Image number 1"
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "var http = require('http');\nhttp.createServer(function (req, res) {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello World!');\n}).listen(8080);"
-        }
-      ]
-    },
-    {
-      "id": "11",
-      "title": "JavaScript News",
-      "subtitle": "What's new in JS in 2023",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png",
-      "views": 1022,
-      "createdAt": "26.06.2023",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "This block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString()).",
-            "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs that are specific to Web pages, please see Web APIs and DOM."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "CODE",
-          "code": "console.log('Hello world!');"
-        },
-        {
-          "id": "3",
-          "type": "TEXT",
-          "title": "This 2 block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString())."
-          ]
-        },
-        {
-          "id": "4",
-          "type": "IMAGE",
-          "src": "https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png",
-          "title": "Image number 1"
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "var http = require('http');\nhttp.createServer(function (req, res) {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello World!');\n}).listen(8080);"
-        }
-      ]
-    },
-    {
-      "id": "12",
-      "title": "JavaScript News",
-      "subtitle": "What's new in JS in 2023",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png",
-      "views": 1022,
-      "createdAt": "26.06.2023",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "This block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString()).",
-            "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs that are specific to Web pages, please see Web APIs and DOM."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "CODE",
-          "code": "console.log('Hello world!');"
-        },
-        {
-          "id": "3",
-          "type": "TEXT",
-          "title": "This 2 block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString())."
-          ]
-        },
-        {
-          "id": "4",
-          "type": "IMAGE",
-          "src": "https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png",
-          "title": "Image number 1"
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "var http = require('http');\nhttp.createServer(function (req, res) {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello World!');\n}).listen(8080);"
-        }
-      ]
-    },
-    {
-      "id": "13",
-      "title": "JavaScript News",
-      "subtitle": "What's new in JS in 2023",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png",
-      "views": 1022,
-      "createdAt": "26.06.2023",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "This block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString()).",
-            "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs that are specific to Web pages, please see Web APIs and DOM."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "CODE",
-          "code": "console.log('Hello world!');"
-        },
-        {
-          "id": "3",
-          "type": "TEXT",
-          "title": "This 2 block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString())."
-          ]
-        },
-        {
-          "id": "4",
-          "type": "IMAGE",
-          "src": "https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png",
-          "title": "Image number 1"
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "var http = require('http');\nhttp.createServer(function (req, res) {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello World!');\n}).listen(8080);"
-        }
-      ]
-    },
-    {
-      "id": "14",
-      "title": "JavaScript News",
-      "subtitle": "What's new in JS in 2023",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png",
-      "views": 1022,
-      "createdAt": "26.06.2023",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "This block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString()).",
-            "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs that are specific to Web pages, please see Web APIs and DOM."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "CODE",
-          "code": "console.log('Hello world!');"
-        },
-        {
-          "id": "3",
-          "type": "TEXT",
-          "title": "This 2 block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString())."
-          ]
-        },
-        {
-          "id": "4",
-          "type": "IMAGE",
-          "src": "https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png",
-          "title": "Image number 1"
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "var http = require('http');\nhttp.createServer(function (req, res) {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello World!');\n}).listen(8080);"
-        }
-      ]
-    },
-    {
-      "id": "15",
-      "title": "JavaScript News",
-      "subtitle": "What's new in JS in 2023",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png",
-      "views": 1022,
-      "createdAt": "26.06.2023",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "This block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString()).",
-            "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs that are specific to Web pages, please see Web APIs and DOM."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "CODE",
-          "code": "console.log('Hello world!');"
-        },
-        {
-          "id": "3",
-          "type": "TEXT",
-          "title": "This 2 block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString())."
-          ]
-        },
-        {
-          "id": "4",
-          "type": "IMAGE",
-          "src": "https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png",
-          "title": "Image number 1"
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "var http = require('http');\nhttp.createServer(function (req, res) {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello World!');\n}).listen(8080);"
-        }
-      ]
-    },
-    {
-      "id": "16",
-      "title": "JavaScript News",
-      "subtitle": "What's new in JS in 2023",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png",
-      "views": 1022,
-      "createdAt": "26.06.2023",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "This block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString()).",
-            "This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs that are specific to Web pages, please see Web APIs and DOM."
-          ]
-        },
-        {
-          "id": "2",
-          "type": "CODE",
-          "code": "console.log('Hello world!');"
-        },
-        {
-          "id": "3",
-          "type": "TEXT",
-          "title": "This 2 block title",
-          "paragraphs": [
-            "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
-            "JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString())."
-          ]
-        },
-        {
-          "id": "4",
-          "type": "IMAGE",
-          "src": "https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png",
-          "title": "Image number 1"
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "var http = require('http');\nhttp.createServer(function (req, res) {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello World!');\n}).listen(8080);"
+          "src": "https://imageio.forbes.com/specials-images/imageserve/643016813686d8eafca00875//960x0.jpg?height=473&width=711&fit=bounds",
+          "title": "Ethical AI Development"
         }
       ]
     }

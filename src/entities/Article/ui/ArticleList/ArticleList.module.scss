@@ -1,15 +1,11 @@
 .LIST {
-  .card {
-    margin-bottom: 30px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .GRID {
   display: flex;
   flex-wrap: wrap;
-
-  .card {
-    margin-right: 30px;
-    margin-bottom: 30px;
-  }
+  gap: 30px;
 }

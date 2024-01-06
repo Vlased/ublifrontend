@@ -1,15 +1,17 @@
-import ArticleViewSwitch from 'features/ArticleViewSwitch/ArticleViewSwitch'
-import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
-import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage'
 import { memo, useCallback } from 'react'
 import { useSelector } from 'react-redux'
+import { useSearchParams } from 'react-router-dom'
 import DynamicModuleLoader, { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import Page from 'widgets/ui/Page/Page'
-import { ArticleList, ArticleView } from '../../../../entities/Article'
+import { ArticleList } from '../../../../entities/Article'
 import { getArticlesPageLoading, getArticlesPageView } from '../../model/selectors/articlesPageSelectors'
-import { articlesPageActions, articlesPageReducer, getArticlesPage } from '../../model/slice/articlesPageSlice'
+import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage'
+import { articlesPageReducer, getArticlesPage } from '../../model/slice/articlesPageSlice'
+import ArticlesPageFilters from '../ArticlesPageFilters/ArticlesPageFilters'
+import styles from './ArticlesPage.module.scss'
 
 const reducers: ReducersList = {
   articlesPage: articlesPageReducer
@@ -20,14 +22,11 @@ const ArticlesPage = () => {
   const articles = useSelector(getArticlesPage.selectAll)
   const view = useSelector(getArticlesPageView)
   const isLoading = useSelector(getArticlesPageLoading)
+  const [searchParams] = useSearchParams()
 
   useInitialEffect(() => {
-    dispatch(initArticlesPage())
+    dispatch(initArticlesPage(searchParams))
   })
-
-  const handleViewChange = useCallback((newView: ArticleView) => {
-    dispatch(articlesPageActions.setView(newView))
-  }, [dispatch])
 
   const handleNextPartLoading = useCallback(() => {
     dispatch(fetchNextArticlesPage())
@@ -38,15 +37,16 @@ const ArticlesPage = () => {
       reducers={reducers}
       removeAfterUnmount={false}
     >
-      <Page handleEndScroll={handleNextPartLoading}>
-        <ArticleViewSwitch
-          view={view}
-          handleViewChange={handleViewChange}
-        />
+      <Page
+        handleEndScroll={handleNextPartLoading}
+        className={styles.container}
+      >
+        <ArticlesPageFilters />
         <ArticleList
           articles={articles}
           view={view}
           isLoading={isLoading}
+          className={styles.list}
         />
       </Page>
     </DynamicModuleLoader>

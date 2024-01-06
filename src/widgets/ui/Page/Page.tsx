@@ -47,7 +47,15 @@ const Page: React.FC<PageProps> = ({ className, children, handleEndScroll }) => 
       onScroll={onScroll}
     >
       {children}
-      <div ref={triggerRef} />
+      {handleEndScroll
+        ? (
+          <div
+            ref={triggerRef}
+            className={styles.trigger}
+          />
+        )
+        : null
+      }
     </section>
   )
 }

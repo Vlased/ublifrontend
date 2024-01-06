@@ -4,6 +4,7 @@ import ArticleListItem from '../ArticleListItem/ArticleListItem'
 import styles from './ArticleList.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames'
 import ArticleListItemSkeleton from '../ArticleListItem/ArticleListItemSkeleton'
+import { Text, TextSize } from 'shared/ui/Text/Text'
 
 interface ArticleListProps {
   className?: string
@@ -36,10 +37,20 @@ const ArticleList: React.FC<ArticleListProps> = ({
         key={article.id}
         article={article}
         view={view}
-        className={styles.card}
       />
     )
   }, [view])
+
+  if (!isLoading && !articles.length) {
+    return (
+      <div className={classNames([styles[view], className])}>
+        <Text
+          title="No articles found"
+          size={TextSize.L}
+        />
+      </div>
+    )
+  }
 
   return (
     <div className={classNames([styles[view], className])}>
