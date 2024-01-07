@@ -7,3 +7,14 @@
   align-items: center;
   padding: 20px;
 }
+
+.contentContainer {
+  display: flex;
+  margin-right: auto;
+  padding-left: 15px;
+}
+
+.appName {
+  width: var(--sidebar-width);
+}
+
