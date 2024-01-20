@@ -3,7 +3,12 @@ import { USER_KEY } from 'shared/constants/localStorage'
 
 export const $api = axios.create({
   baseURL: API,
-  headers: {
-    authorization: localStorage.getItem(USER_KEY)
+})
+
+$api.interceptors.request.use(async (config) => {
+  if(config.headers) {
+    config.headers.Authorization = localStorage.getItem(USER_KEY) || ''
   }
+
+  return config
 })
