@@ -1,6 +1,6 @@
-import { BuildPaths } from './../build/types/config';
-import webpack, { RuleSetRule, ModuleOptions, DefinePlugin } from "webpack"
 import path from 'path';
+import webpack, { DefinePlugin, RuleSetRule } from "webpack";
+import { BuildPaths } from './../build/types/config';
 
 type RuleType = undefined | null | false | "" | 0 | RuleSetRule | "..."
 
@@ -9,7 +9,9 @@ export default ({ config }: { config: webpack.Configuration }) => {
     build: '',
     entry: '',
     html: '',
-    src: path.resolve(__dirname, '../', '../', 'src')
+    src: path.resolve(__dirname, '../', '../', 'src'),
+    locales: path.resolve(__dirname, '../', '../', 'public', 'locales'),
+    buildLocales: path.resolve(__dirname, '../', '../', 'build', 'locales'),
   }
 
   config.resolve?.modules?.push(paths.src)

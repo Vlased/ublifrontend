@@ -1,8 +1,9 @@
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
+import CopyPlugin from 'copy-webpack-plugin'
 import HMTLWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import webpack from 'webpack'
 import { type BuildOptions } from './types/config'
-import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 
 export const buildPlugins = ({ paths, isDev, apiUrl, project }: BuildOptions): webpack.WebpackPluginInstance[] => {
   const plugins = [
@@ -18,6 +19,11 @@ export const buildPlugins = ({ paths, isDev, apiUrl, project }: BuildOptions): w
       IS_DEV: JSON.stringify(isDev),
       API: JSON.stringify(apiUrl),
       PROJECT: JSON.stringify(project)
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: paths.locales, to: paths.buildLocales },
+      ],
     }),
     new webpack.HotModuleReplacementPlugin()
   ]
