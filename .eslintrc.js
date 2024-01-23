@@ -38,6 +38,7 @@ module.exports = module.exports = {
     'react',
     'i18next',
     'react-hooks',
+    'ubli-plugin'
   ],
   rules: {
     'react/jsx-indent': [2, 2],
@@ -78,5 +79,6 @@ module.exports = module.exports = {
    "@typescript-eslint/no-invalid-void-type": 'off',
    "@typescript-eslint/no-empty-interface": 'off',
    'n/no-callback-literal': 'off',
+   'ubli-plugin/path-checker': 'error'
   }
 }

@@ -22,8 +22,8 @@ export const buildPlugins = ({ paths, isDev, apiUrl, project }: BuildOptions): w
     }),
     new CopyPlugin({
       patterns: [
-        { from: paths.locales, to: paths.buildLocales },
-      ],
+        { from: paths.locales, to: paths.buildLocales }
+      ]
     }),
     new webpack.HotModuleReplacementPlugin()
   ]

@@ -9,7 +9,7 @@ import { getArticlesPageOrder, getArticlesPageSearch, getArticlesPageSort, getAr
 import { articlesPageActions } from '../../model/slice/articlesPageSlice'
 import styles from './ArticlesPageFilters.module.scss'
 import { SortOrder } from 'shared/types/sortingTypes'
-import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList'
+import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce'
 import { TabItem, Tabs } from 'shared/ui/Tabs/Tabs'
 import { useTranslation } from 'react-i18next'

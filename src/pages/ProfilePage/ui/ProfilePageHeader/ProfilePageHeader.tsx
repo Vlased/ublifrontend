@@ -1,5 +1,5 @@
 import { profileActions } from '../../model/slice/profileSlice'
-import { getProfileReadonly } from 'pages/ProfilePage/model/selectors/getProfileReadonly/getProfileReadonly'
+import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly'
 import { useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
