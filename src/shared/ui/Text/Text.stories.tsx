@@ -55,6 +55,42 @@ export const PrimaryDark: Story = {
 
 PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]
 
+export const TextS: Story = {
+  args: {
+    children: 'Text',
+    title: 'Title',
+    size: TextSize.S
+  }
+}
+
+export const TextSDark: Story = {
+  args: {
+    children: 'Text',
+    title: 'Title',
+    size: TextSize.S
+  }
+}
+
+TextSDark.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const TextM: Story = {
+  args: {
+    children: 'Text',
+    title: 'Title',
+    size: TextSize.M
+  }
+}
+
+export const TextMDark: Story = {
+  args: {
+    children: 'Text',
+    title: 'Title',
+    size: TextSize.M
+  }
+}
+
+TextMDark.decorators = [ThemeDecorator(Theme.DARK)]
+
 export const TextL: Story = {
   args: {
     children: 'Text',

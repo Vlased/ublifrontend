@@ -34,7 +34,7 @@ export const Sidebar: React.FC<SidebarProps> = memo(({ className = '' }) => {
     )), [isCollapsed, auth, sidebarItemsList])
 
   return (
-    <nav
+    <aside
       data-testid='sidebar'
       className={classNames([styles.sidebar, className], { [styles.collapsed]: isCollapsed })}
     >
@@ -51,6 +51,7 @@ export const Sidebar: React.FC<SidebarProps> = memo(({ className = '' }) => {
       <VStack
         className={styles.items}
         alignItems="flex-start"
+        role="navigation"
       >
         {linksItems}
       </VStack>
@@ -64,6 +65,6 @@ export const Sidebar: React.FC<SidebarProps> = memo(({ className = '' }) => {
         <ThemeSwitcher />
         <LangSwitcher className={styles.lang} short={isCollapsed} />
       </Flex>
-    </nav>
+    </aside>
   )
 })

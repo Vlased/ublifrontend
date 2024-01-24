@@ -41,7 +41,7 @@ const Page: React.FC<PageProps> = ({ className, children, handleEndScroll }) => 
   }, 2000)
 
   return (
-    <section
+    <main
       className={classNames([styles.container, className])}
       ref={wrapperRef}
       onScroll={onScroll}
@@ -56,7 +56,7 @@ const Page: React.FC<PageProps> = ({ className, children, handleEndScroll }) => 
         )
         : null
       }
-    </section>
+    </main>
   )
 }
 
