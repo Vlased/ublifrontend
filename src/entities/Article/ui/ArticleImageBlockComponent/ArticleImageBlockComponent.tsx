@@ -1,15 +1,15 @@
-import { ArticleBlockImage } from '../../model/types/article'
-import { memo } from 'react'
-import styles from './ArticleImageBlockComponent.module.scss'
-import { Text, TextAlign } from 'shared/ui/Text/Text'
+import { FC, memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
+import { Text, TextAlign } from 'shared/ui/Text/Text'
+import { ArticleBlockImage } from '../../model/types/article'
+import styles from './ArticleImageBlockComponent.module.scss'
 
 interface ArticleImageBlockComponentProps {
   className?: string
   block: ArticleBlockImage
 }
 
-const ArticleImageBlockComponent: React.FC<ArticleImageBlockComponentProps> = memo(({
+const ArticleImageBlockComponent: FC<ArticleImageBlockComponentProps> = memo(({
   block,
   className
 }) => {

@@ -1,6 +1,8 @@
+import { FunctionComponent, SVGProps } from 'react'
+
 export interface SidebarItemType {
   path: string
   text: string
-  Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
+  Icon: FunctionComponent<SVGProps<SVGSVGElement>>
   authOnly?: boolean
 }

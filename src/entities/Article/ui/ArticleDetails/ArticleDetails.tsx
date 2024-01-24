@@ -1,23 +1,23 @@
-import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
+import { FC, memo, useCallback } from 'react'
+import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
+import CalendarIcon from 'shared/assets/icons/calendar_icon.svg'
+import EyeIcon from 'shared/assets/icons/eye_icon.svg'
 import DynamicModuleLoader, { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { memo, useCallback } from 'react'
-import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
-import { useSelector } from 'react-redux'
-import { getArticleDetailsData, getArticleDetailsError, getArticleDetailsLoading } from '../../model/selectors/getArticleDetails'
-import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text'
-import { useTranslation } from 'react-i18next'
-import { Skeleton } from 'shared/ui/Skeleton/Skeleton'
-import styles from './ArticleDetails.module.scss'
-import { Avatar } from 'shared/ui/Avatar/Avatar'
-import EyeIcon from 'shared/assets/icons/eye_icon.svg'
-import CalendarIcon from 'shared/assets/icons/calendar_icon.svg'
-import Icon from 'shared/ui/Icon/Icon'
-import { ArticleBlock, ArticleBlockType } from '../../model/types/article'
-import ArticleTextBlockComponent from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
-import ArticleImageBlockComponent from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
-import ArticleCodeBlockComponent from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
+import { Avatar } from 'shared/ui/Avatar/Avatar'
+import Icon from 'shared/ui/Icon/Icon'
+import { Skeleton } from 'shared/ui/Skeleton/Skeleton'
+import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text'
+import { getArticleDetailsData, getArticleDetailsError, getArticleDetailsLoading } from '../../model/selectors/getArticleDetails'
+import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
+import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
+import { ArticleBlock, ArticleBlockType } from '../../model/types/article'
+import ArticleCodeBlockComponent from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
+import ArticleImageBlockComponent from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
+import ArticleTextBlockComponent from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
+import styles from './ArticleDetails.module.scss'
 
 interface ArticleDetailsProps {
   id?: string
@@ -27,7 +27,7 @@ const reducers: ReducersList = {
   articleDetails: articleDetailsReducer
 }
 
-export const ArticleDetails: React.FC<ArticleDetailsProps> = memo(({ id }) => {
+export const ArticleDetails: FC<ArticleDetailsProps> = memo(({ id }) => {
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const isLoading = useSelector(getArticleDetailsLoading)

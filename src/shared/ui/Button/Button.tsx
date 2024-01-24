@@ -1,4 +1,4 @@
-import React, { memo, type ButtonHTMLAttributes } from 'react'
+import { FC, memo, type ButtonHTMLAttributes } from 'react'
 import { classNames, Mods } from 'shared/lib/classNames/classNames'
 import styles from './Button.module.scss'
 
@@ -25,7 +25,7 @@ interface ButtonProps {
   disabled?: boolean
 }
 
-export const Button: React.FC<ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = memo(({
+export const Button: FC<ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = memo(({
   className = '',
   children,
   theme = ButtonTheme.OUTLINED,

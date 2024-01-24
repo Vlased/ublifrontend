@@ -1,13 +1,14 @@
-import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text'
+import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
-import styles from './ProfileCard.module.scss'
-import { Input } from 'shared/ui/Input/Input'
-import { Profile } from '../../../../pages/ProfilePage/model/types/profile'
-import { Loader } from 'shared/ui/Loader/Loader'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Avatar } from 'shared/ui/Avatar/Avatar'
-import { Currency, CurrencySelect } from '../../../../entities/Currency'
+import { Input } from 'shared/ui/Input/Input'
+import { Loader } from 'shared/ui/Loader/Loader'
+import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text'
 import { Country, CountrySelect } from '../../../../entities/Country'
+import { Currency, CurrencySelect } from '../../../../entities/Currency'
+import { Profile } from '../../../../pages/ProfilePage/model/types/profile'
+import styles from './ProfileCard.module.scss'
 
 interface ProfileCardProps {
   formData?: Profile
@@ -24,7 +25,7 @@ interface ProfileCardProps {
   handleCountryChange?: (value?: Country) => void
 }
 
-export const ProfileCard: React.FC<ProfileCardProps> = ({
+export const ProfileCard: FC<ProfileCardProps> = ({
   formData,
   error,
   isLoading,

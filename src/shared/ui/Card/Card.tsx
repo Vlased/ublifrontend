@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from 'react'
+import { FC, HTMLAttributes, ReactNode } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import styles from './Card.module.scss'
 
@@ -9,11 +9,11 @@ export enum CardTheme {
 
 interface CardProps {
   className?: string
-  children: React.ReactNode
+  children: ReactNode
   theme?: CardTheme
 }
 
-export const Card: React.FC<CardProps & HTMLAttributes<HTMLDivElement>> = ({
+export const Card: FC<CardProps & HTMLAttributes<HTMLDivElement>> = ({
   className,
   children,
   theme = CardTheme.NORMAL,

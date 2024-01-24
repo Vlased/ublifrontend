@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import { FC, memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
 import styles from './Text.module.scss'
@@ -38,7 +38,7 @@ const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
   [TextSize.L]: 'h1'
 }
 
-export const Text: React.FC<TextProps> = memo(({
+export const Text: FC<TextProps> = memo(({
   className,
   title,
   children,

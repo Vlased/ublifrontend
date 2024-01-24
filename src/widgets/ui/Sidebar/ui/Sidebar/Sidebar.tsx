@@ -1,20 +1,20 @@
-import { memo, useCallback, useMemo, useState } from 'react'
+import { FC, memo, useCallback, useMemo, useState } from 'react'
+import { useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button'
+import { Flex, VStack } from 'shared/ui/Stack'
+import { getAuthData } from '../../../../../entities/User'
 import { LangSwitcher } from '../../../LangSwitcher'
 import { ThemeSwitcher } from '../../../ThemeSwitcher'
-import styles from './Sidebar.module.scss'
-import SidebarItem from '../SidebarItem/SidebarItem'
-import { useSelector } from 'react-redux'
-import { getAuthData } from '../../../../../entities/User'
 import { getSidebarItems } from '../../model/selectors/getSidebarItems'
-import { Flex, VStack } from 'shared/ui/Stack'
+import SidebarItem from '../SidebarItem/SidebarItem'
+import styles from './Sidebar.module.scss'
 
 interface SidebarProps {
   className?: string
 }
 
-export const Sidebar: React.FC<SidebarProps> = memo(({ className = '' }) => {
+export const Sidebar: FC<SidebarProps> = memo(({ className = '' }) => {
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false)
   const auth = useSelector(getAuthData)
   const sidebarItemsList = useSelector(getSidebarItems)

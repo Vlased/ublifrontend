@@ -1,8 +1,8 @@
-import { ArticleView } from '../../model/types/article'
-import React from 'react'
+import { FC } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Card } from 'shared/ui/Card/Card'
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton'
+import { ArticleView } from '../../model/types/article'
 import styles from './ArticleListItem.module.scss'
 
 interface ArticleListItemSkeletonProps {
@@ -10,7 +10,7 @@ interface ArticleListItemSkeletonProps {
   view: ArticleView
 }
 
-const ArticleListItemSkeleton: React.FC<ArticleListItemSkeletonProps> = ({
+const ArticleListItemSkeleton: FC<ArticleListItemSkeletonProps> = ({
   className,
   view
 }) => {

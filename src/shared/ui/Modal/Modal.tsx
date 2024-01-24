@@ -1,11 +1,11 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import { FC, MouseEvent, ReactNode, useCallback, useEffect, useRef, useState } from 'react'
 import { classNames, Mods } from 'shared/lib/classNames/classNames'
 import Portal from '../Portal/Portal'
 import styles from './Modal.module.scss'
 
 interface ModalProps {
   className?: string
-  children: React.ReactNode
+  children: ReactNode
   isOpen?: boolean
   onClose?: () => void
   disablePortal?: boolean
@@ -14,7 +14,7 @@ interface ModalProps {
 
 const CLOSING_DELAY = 150
 
-export const Modal: React.FC<ModalProps> = ({
+export const Modal: FC<ModalProps> = ({
   className,
   children,
   isOpen,
@@ -36,7 +36,7 @@ export const Modal: React.FC<ModalProps> = ({
     }
   }, [onClose])
 
-  const handleContentClick = useCallback((e: React.MouseEvent) => {
+  const handleContentClick = useCallback((e: MouseEvent) => {
     e.stopPropagation()
   }, [])
 

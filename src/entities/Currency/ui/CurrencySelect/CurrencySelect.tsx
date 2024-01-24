@@ -1,6 +1,6 @@
-import { Currency } from '../../model/types/currency'
+import { FC, memo, useCallback } from 'react'
 import { Select, SelectOptionType } from 'shared/ui/Select/Select'
-import { memo, useCallback } from 'react'
+import { Currency } from '../../model/types/currency'
 
 const currencyOptions: Array<SelectOptionType<Currency>> = [
   {
@@ -24,7 +24,7 @@ interface CurrencySelectProps {
   readonly?: boolean
 }
 
-const CurrencySelect: React.FC<CurrencySelectProps> = memo(({
+const CurrencySelect: FC<CurrencySelectProps> = memo(({
   className,
   value,
   onChange,

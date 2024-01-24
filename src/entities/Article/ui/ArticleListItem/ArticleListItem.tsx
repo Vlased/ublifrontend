@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC, HTMLAttributeAnchorTarget } from 'react'
 import { useTranslation } from 'react-i18next'
 import EyeIcon from 'shared/assets/icons/eye_icon.svg'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
@@ -17,10 +17,10 @@ interface ArticleListItemProps {
   className?: string
   article: Article
   view: ArticleView
-  target?: React.HTMLAttributeAnchorTarget
+  target?: HTMLAttributeAnchorTarget
 }
 
-const ArticleListItem: React.FC<ArticleListItemProps> = ({ className, article, view, target }) => {
+const ArticleListItem: FC<ArticleListItemProps> = ({ className, article, view, target }) => {
   const { t } = useTranslation()
 
   const types = (

@@ -1,6 +1,6 @@
-import { ArticleBlockText } from '../../model/types/article'
-import { memo } from 'react'
+import { FC, memo } from 'react'
 import { Text } from 'shared/ui/Text/Text'
+import { ArticleBlockText } from '../../model/types/article'
 import styles from './ArticleTextBlockComponent.module.scss'
 
 interface ArticleTextBlockComponentProps {
@@ -8,7 +8,7 @@ interface ArticleTextBlockComponentProps {
   block: ArticleBlockText
 }
 
-const ArticleTextBlockComponent: React.FC<ArticleTextBlockComponentProps> = memo(({
+const ArticleTextBlockComponent: FC<ArticleTextBlockComponentProps> = memo(({
   className,
   block
 }) => {

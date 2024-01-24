@@ -1,13 +1,13 @@
-import { ArticleBlockCode } from '../../model/types/article'
-import { memo } from 'react'
+import { FC, memo } from 'react'
 import { Code } from 'shared/ui/Code/Code'
+import { ArticleBlockCode } from '../../model/types/article'
 
 interface ArticleCodeBlockComponentProps {
   className?: string
   block: ArticleBlockCode
 }
 
-const ArticleCodeBlockComponent: React.FC<ArticleCodeBlockComponentProps> = memo(({
+const ArticleCodeBlockComponent: FC<ArticleCodeBlockComponentProps> = memo(({
   className,
   block
 }) => {

@@ -1,6 +1,6 @@
 import { StateSchema } from 'app/providers/StoreProvider'
 import { getScrollByPath, scrollRestorationActions } from 'features/ScrollRestoration'
-import React, { useRef } from 'react'
+import { FC, MutableRefObject, ReactNode, UIEvent, useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -12,13 +12,13 @@ import styles from './Page.module.scss'
 
 interface PageProps {
   className?: string
-  children: React.ReactNode
+  children: ReactNode
   handleEndScroll?: () => void
 }
 
-const Page: React.FC<PageProps> = ({ className, children, handleEndScroll }) => {
-  const triggerRef = useRef() as React.MutableRefObject<HTMLDivElement>
-  const wrapperRef = useRef() as React.MutableRefObject<HTMLDivElement>
+const Page: FC<PageProps> = ({ className, children, handleEndScroll }) => {
+  const triggerRef = useRef() as MutableRefObject<HTMLDivElement>
+  const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>
   const dispatch = useAppDispatch()
   const { pathname } = useLocation()
   const scrollPosition = useSelector((state: StateSchema) => getScrollByPath(state, pathname))
@@ -33,7 +33,7 @@ const Page: React.FC<PageProps> = ({ className, children, handleEndScroll }) => 
     wrapperRef.current.scrollTop = scrollPosition
   })
 
-  const onScroll = useThrottle((e: React.UIEvent<HTMLDivElement>) => {
+  const onScroll = useThrottle((e: UIEvent<HTMLDivElement>) => {
     dispatch(scrollRestorationActions.setScrollPosition({
       position: e.currentTarget.scrollTop,
       path: pathname

@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import { FC, HTMLAttributeAnchorTarget, useCallback } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Text, TextSize } from 'shared/ui/Text/Text'
 import { Article, ArticleView } from '../../model/types/article'
@@ -11,7 +11,7 @@ interface ArticleListProps {
   articles: Article[]
   isLoading?: boolean
   view?: ArticleView
-  target?: React.HTMLAttributeAnchorTarget
+  target?: HTMLAttributeAnchorTarget
 }
 
 const getSkeletons = (view: ArticleView) => (
@@ -26,7 +26,7 @@ const getSkeletons = (view: ArticleView) => (
     ))
 )
 
-const ArticleList: React.FC<ArticleListProps> = ({
+const ArticleList: FC<ArticleListProps> = ({
   className,
   articles,
   isLoading,

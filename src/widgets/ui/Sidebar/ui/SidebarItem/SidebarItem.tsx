@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import { FC, memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
@@ -10,7 +10,7 @@ interface SidebarItemProps {
   isCollapsed: boolean
 }
 
-const SidebarItem: React.FC<SidebarItemProps> = memo(({ item, isCollapsed }) => {
+const SidebarItem: FC<SidebarItemProps> = memo(({ item, isCollapsed }) => {
   const { t } = useTranslation()
   const { Icon } = item
 

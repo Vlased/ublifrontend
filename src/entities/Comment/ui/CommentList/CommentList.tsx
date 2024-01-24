@@ -1,6 +1,6 @@
-import { Comment } from '../../model/types/comment'
-import { memo } from 'react'
+import { FC, memo } from 'react'
 import { Text } from 'shared/ui/Text/Text'
+import { Comment } from '../../model/types/comment'
 import CommentCard from '../CommentCard/CommentCard'
 import styles from './CommentList.module.scss'
 
@@ -9,7 +9,7 @@ interface CommentListProps {
   isLoading?: boolean
 }
 
-const CommentList: React.FC<CommentListProps> = memo(({ comments, isLoading }) => {
+const CommentList: FC<CommentListProps> = memo(({ comments, isLoading }) => {
   if (!comments?.length) {
     return (
       <Text>

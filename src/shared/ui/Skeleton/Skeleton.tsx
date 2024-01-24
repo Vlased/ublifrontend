@@ -1,4 +1,4 @@
-import { CSSProperties, memo } from 'react'
+import { CSSProperties, FC, memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import mainStyles from './Skeleton.module.scss'
 
@@ -9,7 +9,7 @@ interface SkeletonProps {
   border?: string
 }
 
-export const Skeleton: React.FC<SkeletonProps> = memo(({
+export const Skeleton: FC<SkeletonProps> = memo(({
   className,
   width,
   height,

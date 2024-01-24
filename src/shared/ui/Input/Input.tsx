@@ -1,4 +1,4 @@
-import React, { InputHTMLAttributes, memo, useCallback, useEffect, useRef, useState } from 'react'
+import { ChangeEvent, FC, InputHTMLAttributes, memo, useCallback, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
 import styles from './Input.module.scss'
@@ -13,7 +13,7 @@ interface InputProps {
   readonly?: boolean
 }
 
-export const Input: React.FC<InputProps & HTMLInputProps> = memo(({
+export const Input: FC<InputProps & HTMLInputProps> = memo(({
   className,
   value,
   onChange,
@@ -36,7 +36,7 @@ export const Input: React.FC<InputProps & HTMLInputProps> = memo(({
     }
   }, [autoFocus])
 
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     onChange?.(e.target.value)
     setCaretPosition(e.target.value.length)
   }, [onChange])

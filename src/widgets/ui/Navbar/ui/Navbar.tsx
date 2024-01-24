@@ -1,5 +1,5 @@
 import { LoginModal } from 'features/AuthByUsername'
-import { memo, useCallback, useState } from 'react'
+import { FC, memo, useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
@@ -14,7 +14,7 @@ interface NavbarProps {
   className?: string
 }
 
-export const Navbar: React.FC<NavbarProps> = memo(({ className }) => {
+export const Navbar: FC<NavbarProps> = memo(({ className }) => {
   const { t } = useTranslation()
   const [isAuthModalOpen, setIsAuthModalOpen] = useState<boolean>(false)
   const dispatch = useDispatch()

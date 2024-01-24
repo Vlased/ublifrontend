@@ -1,12 +1,12 @@
-import React, { useCallback } from 'react'
+import { FC, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
+import DynamicModuleLoader, { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Button } from 'shared/ui/Button/Button'
 import { Input } from 'shared/ui/Input/Input'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { getAddCommentFormText } from '../../model/selectors/addCommentFormSelectors'
 import { addCommentFormActions, addCommentFormReducer } from '../../model/slice/addCommentFormSlice'
-import DynamicModuleLoader, { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import styles from './AddCommentForm.module.scss'
 
 interface AddCommentFormProps {
@@ -17,7 +17,7 @@ const reducers: ReducersList = {
   addCommentForm: addCommentFormReducer
 }
 
-const AddCommentForm: React.FC<AddCommentFormProps> = ({ handleCommentSend }) => {
+const AddCommentForm: FC<AddCommentFormProps> = ({ handleCommentSend }) => {
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const text = useSelector(getAddCommentFormText)

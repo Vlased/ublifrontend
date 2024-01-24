@@ -1,15 +1,15 @@
 import { useTheme } from 'app/providers/ThemeProvider'
-import { classNames } from 'shared/lib/classNames/classNames'
-import styles from './ThemeSwitcher.module.scss'
+import { FC, memo } from 'react'
 import FigmaIcon from 'shared/assets/icons/figma_icon.svg'
+import { classNames } from 'shared/lib/classNames/classNames'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
-import { memo } from 'react'
+import styles from './ThemeSwitcher.module.scss'
 
 interface ThemeSwitcherProps {
   className?: string
 }
 
-export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = memo(({ className }) => {
+export const ThemeSwitcher: FC<ThemeSwitcherProps> = memo(({ className }) => {
   const { toggleTheme } = useTheme()
 
   return (

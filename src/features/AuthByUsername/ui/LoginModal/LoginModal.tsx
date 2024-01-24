@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import { FC, memo } from 'react'
 import { Modal } from 'shared/ui/Modal/Modal'
 import { LoginFormAsync as LoginForm } from '../LoginForm/LoginForm.async'
 
@@ -7,7 +7,7 @@ interface LoginModalProps {
   onClose: () => void
 }
 
-const LoginModal: React.FC<LoginModalProps> = memo(({ isOpen, onClose }) => {
+const LoginModal: FC<LoginModalProps> = memo(({ isOpen, onClose }) => {
   return (
     <Modal
       isOpen={isOpen}

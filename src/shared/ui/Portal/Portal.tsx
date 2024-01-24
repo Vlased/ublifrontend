@@ -1,13 +1,13 @@
-import React from 'react'
+import { FC, ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 
 interface PortalProps {
-  children: React.ReactNode
+  children: ReactNode
   element?: HTMLElement
   disablePortal?: boolean
 }
 
-const Portal: React.FC<PortalProps> = ({ children, element = document.body, disablePortal }) => {
+const Portal: FC<PortalProps> = ({ children, element = document.body, disablePortal }) => {
   if (disablePortal) {
     return (
       <>

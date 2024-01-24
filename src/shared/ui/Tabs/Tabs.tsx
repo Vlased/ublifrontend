@@ -1,10 +1,10 @@
-import React, { useCallback } from 'react'
+import { ReactNode, useCallback } from 'react'
 import { Card, CardTheme } from '../Card/Card'
 import styles from './Tabs.module.scss'
 
 export interface TabItem<T extends string> {
   value: T
-  content: React.ReactNode
+  content: ReactNode
 }
 
 interface TabsProps<T extends string> {

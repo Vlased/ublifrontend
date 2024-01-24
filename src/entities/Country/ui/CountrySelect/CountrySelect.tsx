@@ -1,5 +1,5 @@
+import { FC, memo, useCallback } from 'react'
 import { Select, SelectOptionType } from 'shared/ui/Select/Select'
-import { memo, useCallback } from 'react'
 import { Country } from '../../model/types/country'
 
 const currencyOptions: Array<SelectOptionType<Country>> = [
@@ -24,7 +24,7 @@ interface CountrySelectProps {
   readonly?: boolean
 }
 
-const CountrySelect: React.FC<CountrySelectProps> = memo(({
+const CountrySelect: FC<CountrySelectProps> = memo(({
   className,
   value,
   onChange,

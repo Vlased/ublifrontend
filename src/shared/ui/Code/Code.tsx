@@ -1,14 +1,14 @@
-import React, { useCallback } from 'react'
-import styles from './Code.module.scss'
+import { FC, useCallback } from 'react'
 import CopyIcon from 'shared/assets/icons/copy_icon.svg'
 import { Button, ButtonTheme } from '../Button/Button'
 import Icon from '../Icon/Icon'
+import styles from './Code.module.scss'
 
 interface CodeProps {
   children: string
 }
 
-export const Code: React.FC<CodeProps> = ({ children }) => {
+export const Code: FC<CodeProps> = ({ children }) => {
   const handleCopy = useCallback(() => {
     navigator.clipboard.writeText(children)
   }, [children])

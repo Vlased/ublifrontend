@@ -1,8 +1,8 @@
-import { ArticleSortField } from '../../model/types/article'
-import { memo, useMemo } from 'react'
+import { FC, memo, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Select, SelectOptionType } from 'shared/ui/Select/Select'
 import { SortOrder } from 'shared/types/sortingTypes'
+import { Select, SelectOptionType } from 'shared/ui/Select/Select'
+import { ArticleSortField } from '../../model/types/article'
 import styles from './ArticleSortSelector.module.scss'
 
 interface ArticleSortSelectorProps {
@@ -12,7 +12,7 @@ interface ArticleSortSelectorProps {
   handleOrderChange: (newOrder: SortOrder) => void
 }
 
-const ArticleSortSelector: React.FC<ArticleSortSelectorProps> = memo(({
+const ArticleSortSelector: FC<ArticleSortSelectorProps> = memo(({
   sort,
   order,
   handleSortChange,
