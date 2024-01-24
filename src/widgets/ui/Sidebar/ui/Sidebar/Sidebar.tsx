@@ -8,6 +8,7 @@ import SidebarItem from '../SidebarItem/SidebarItem'
 import { useSelector } from 'react-redux'
 import { getAuthData } from '../../../../../entities/User'
 import { getSidebarItems } from '../../model/selectors/getSidebarItems'
+import { Flex, VStack } from 'shared/ui/Stack'
 
 interface SidebarProps {
   className?: string
@@ -47,13 +48,22 @@ export const Sidebar: React.FC<SidebarProps> = memo(({ className = '' }) => {
       >
         {isCollapsed ? '>' : '<'}
       </Button>
-      <div className={styles.items}>
+      <VStack
+        className={styles.items}
+        alignItems="flex-start"
+      >
         {linksItems}
-      </div>
-      <div className={styles.switchers}>
+      </VStack>
+      <Flex
+        className={styles.switchers}
+        gap="16px"
+        justifyContent="center"
+        flexDirection={isCollapsed ? 'column' : 'row'}
+        max
+      >
         <ThemeSwitcher />
         <LangSwitcher className={styles.lang} short={isCollapsed} />
-      </div>
+      </Flex>
     </nav>
   )
 })
