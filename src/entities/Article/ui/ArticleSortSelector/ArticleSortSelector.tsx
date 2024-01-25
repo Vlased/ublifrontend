@@ -1,9 +1,9 @@
 import { FC, memo, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { SortOrder } from 'shared/types/sortingTypes'
-import { Select, SelectOptionType } from 'shared/ui/Select/Select'
+import { ListBox, ListBoxItem } from 'shared/ui/ListBox/ListBox'
+import { HStack } from 'shared/ui/Stack'
 import { ArticleSortField } from '../../model/types/article'
-import styles from './ArticleSortSelector.module.scss'
 
 interface ArticleSortSelectorProps {
   sort: ArticleSortField
@@ -20,7 +20,7 @@ const ArticleSortSelector: FC<ArticleSortSelectorProps> = memo(({
 }) => {
   const { t } = useTranslation()
 
-  const orderOptions = useMemo<Array<SelectOptionType<SortOrder>>>(() => [
+  const orderOptions = useMemo<ListBoxItem[]>(() => [
     {
       value: 'asc',
       content: t('ascending order')
@@ -31,7 +31,7 @@ const ArticleSortSelector: FC<ArticleSortSelectorProps> = memo(({
     }
   ], [t])
 
-  const sortFieldOptions = useMemo<Array<SelectOptionType<ArticleSortField>>>(() => [
+  const sortFieldOptions = useMemo<ListBoxItem[]>(() => [
     {
       value: ArticleSortField.CREATED_AT,
       content: t('(by)creation date')
@@ -47,20 +47,22 @@ const ArticleSortSelector: FC<ArticleSortSelectorProps> = memo(({
   ], [t])
 
   return (
-    <div className={styles.container}>
-      <Select
-        options={sortFieldOptions}
+    <HStack gap="8px">
+      <ListBox<ArticleSortField>
+        items={sortFieldOptions}
         label="Sort by"
+        defaultValue="Sort by"
         value={sort}
         onChange={handleSortChange}
       />
-      <Select
-        options={orderOptions}
+      <ListBox<SortOrder>
+        items={orderOptions}
         label="In(order)"
+        defaultValue="In(order)"
         value={order}
         onChange={handleOrderChange}
       />
-    </div>
+    </HStack>
   )
 })
 

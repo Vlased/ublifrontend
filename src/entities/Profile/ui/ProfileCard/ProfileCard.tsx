@@ -4,6 +4,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { Avatar } from 'shared/ui/Avatar/Avatar'
 import { Input } from 'shared/ui/Input/Input'
 import { Loader } from 'shared/ui/Loader/Loader'
+import { VStack } from 'shared/ui/Stack'
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text'
 import { Country, CountrySelect } from '../../../../entities/Country'
 import { Currency, CurrencySelect } from '../../../../entities/Currency'
@@ -43,15 +44,23 @@ export const ProfileCard: FC<ProfileCardProps> = ({
 
   if (isLoading) {
     return (
-      <div className={classNames([styles.profileCard, styles.loadingContainer])}>
+      <VStack
+        className={classNames([styles.profileCard, styles.loadingContainer])}
+        justifyContent="center"
+        max
+      >
         <Loader />
-      </div>
+      </VStack>
     )
   }
 
   if (error) {
     return (
-      <div className={classNames([styles.profileCard, styles.errorContainer])}>
+      <VStack
+        className={classNames([styles.profileCard, styles.errorContainer])}
+        justifyContent="center"
+        max
+      >
         <Text
           title={t('An unknown error happened')}
           theme={TextTheme.ERROR}
@@ -59,19 +68,22 @@ export const ProfileCard: FC<ProfileCardProps> = ({
         >
           {t('Try to refresh the page')}
         </Text>
-      </div>
+      </VStack>
     )
   }
 
   return (
-    <div className={classNames([styles.profileCard], { [styles.editing]: !readonly })}>
+    <VStack
+      className={classNames([styles.profileCard], { [styles.editing]: !readonly })}
+      alignItems="flex-start"
+    >
       {formData?.avatar && (
-        <div className={styles.avatarWrapper}>
+        <VStack max>
           <Avatar
             src={formData?.avatar}
             alt="Avatar"
           />
-        </div>
+        </VStack>
       )}
       <Input
         value={formData?.firstName}
@@ -127,6 +139,6 @@ export const ProfileCard: FC<ProfileCardProps> = ({
         readonly={readonly}
         className={styles.input}
       />
-    </div>
+    </VStack>
   )
 }

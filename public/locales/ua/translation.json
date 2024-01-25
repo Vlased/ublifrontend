@@ -40,7 +40,7 @@
   "Back to list": "Назад до списку",
   "Sort by": "Сортувати за",
   "Search": "Пошук",
-  "In(order)": "За ",
+  "In(order)": "За",
   "ascending order": "зростанням",
   "(by)descending order": "спаданням",
   "(by)creation date": "датою створення",
@@ -60,5 +60,6 @@
   "Recommendations": "Рекомендації",
   "Create New Article": "Створити Нову Статтю",
   "Edit Article": "Змінити Статтю",
-  "My App": "Мій Додаток"
+  "My App": "Мій Додаток",
+  "Select Value": "Виберіть Значення"
 }

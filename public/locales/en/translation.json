@@ -40,7 +40,7 @@
   "Back to list": "Back to list",
   "Sort by": "Sort by",
   "Search": "Search",
-  "In(order)": "In ",
+  "In(order)": "In",
   "ascending order": "ascending order",
   "descending order": "descending order",
   "(by)creation date": "creation date",
@@ -60,5 +60,6 @@
   "Recommendations": "Recommendations",
   "Create New Article": "Create New Article",
   "Edit Article": "Edit Article",
-  "My App": "My App"
+  "My App": "My App",
+  "Select Value": "Select Value"
 }

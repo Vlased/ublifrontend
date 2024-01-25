@@ -1,8 +1,8 @@
 import { FC, memo, useCallback } from 'react'
-import { Select, SelectOptionType } from 'shared/ui/Select/Select'
+import { ListBox, ListBoxItem } from 'shared/ui/ListBox/ListBox'
 import { Currency } from '../../model/types/currency'
 
-const currencyOptions: Array<SelectOptionType<Currency>> = [
+const currencyOptions: ListBoxItem[] = [
   {
     value: Currency.EUR,
     content: Currency.EUR
@@ -35,13 +35,15 @@ const CurrencySelect: FC<CurrencySelectProps> = memo(({
   }, [onChange])
 
   return (
-    <Select
+    <ListBox
       label="Select Currency"
-      options={currencyOptions}
+      defaultValue="Select Currency"
+      items={currencyOptions}
       value={value}
       onChange={handleChange}
       readonly={readonly}
       className={className}
+      direction="top"
     />
   )
 })
