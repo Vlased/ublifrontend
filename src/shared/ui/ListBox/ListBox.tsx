@@ -2,6 +2,7 @@ import { Listbox as HListBox } from '@headlessui/react'
 import { Fragment, ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
+import { DropdownDirection } from 'shared/types/ui'
 import { Button } from '../Button/Button'
 import { HStack } from '../Stack'
 import styles from './ListBox.module.scss'
@@ -11,8 +12,6 @@ export interface ListBoxItem {
   content: ReactNode
   disabled?: boolean
 }
-
-type DropdownDirection = 'top' | 'bottom'
 
 interface ListBoxProps<T extends string> {
   className?: string
@@ -33,7 +32,7 @@ export const ListBox = <T extends string>({
   defaultValue,
   readonly,
   label,
-  direction = 'bottom'
+  direction = 'bottom-right'
 }: ListBoxProps<T>) => {
   const { t } = useTranslation()
 
@@ -60,7 +59,7 @@ export const ListBox = <T extends string>({
           </Button>
         </HListBox.Button>
         <HListBox.Options
-          className={classNames([styles.options, styles[`direction-${direction}`]])}
+          className={classNames([styles.options, styles[direction]])}
         >
           {items.map((item) => (
             <HListBox.Option
