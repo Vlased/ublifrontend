@@ -1,3 +1,4 @@
+import { Profile } from 'pages/ProfilePage'
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -8,7 +9,6 @@ import { VStack } from 'shared/ui/Stack'
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text'
 import { Country, CountrySelect } from '../../../../entities/Country'
 import { Currency, CurrencySelect } from '../../../../entities/Currency'
-import { Profile } from '../../../../pages/ProfilePage/model/types/profile'
 import styles from './ProfileCard.module.scss'
 
 interface ProfileCardProps {

@@ -1,17 +1,17 @@
-import { profileActions } from '../../model/slice/profileSlice'
-import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly'
+import { getProfileData } from 'pages/ProfilePage'
 import { useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { Text } from 'shared/ui/Text/Text'
-import styles from './ProfilePageHeader.module.scss'
-import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData'
 import { getAuthData } from '../../../../entities/User'
-import { getProfileData } from '../../model/selectors/getProfileData/getProfileData'
+import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly'
+import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData'
+import { profileActions } from '../../model/slice/profileSlice'
+import styles from './EditableProfileCardHeader.module.scss'
 
-const ProfilePageHeader = () => {
+export const EditableProfileCardHeader = () => {
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const authData = useSelector(getAuthData)
@@ -70,5 +70,3 @@ const ProfilePageHeader = () => {
     </div>
   )
 }
-
-export default ProfilePageHeader

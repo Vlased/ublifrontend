@@ -1,8 +1,8 @@
-import { ProfileSchema } from '../types/profile'
 import { profileActions, profileReducer } from './profileSlice'
 import { Country } from '../../../../entities/Country'
 import { Currency } from '../../../../entities/Currency'
 import { updateProfileData } from '../services/updateProfileData/updateProfileData'
+import { EditableProfileCardSchema } from '../types/editableProfileCardSchema'
 
 const data = {
   firstName: 'firstName',
@@ -17,19 +17,19 @@ const data = {
 
 describe('profileSlice', () => {
   test('test setReadonly', () => {
-    const state: DeepPartial<ProfileSchema> = {
+    const state: DeepPartial<EditableProfileCardSchema> = {
       readonly: false
     }
     expect(profileReducer(
-      state as ProfileSchema,
+      state as EditableProfileCardSchema,
       profileActions.setReadonly(true)
     )).toEqual({ readonly: true })
   })
 
   test('test cancelEdit', () => {
-    const state: DeepPartial<ProfileSchema> = { data, form: {} }
+    const state: DeepPartial<EditableProfileCardSchema> = { data, form: {} }
     expect(profileReducer(
-      state as ProfileSchema,
+      state as EditableProfileCardSchema,
       profileActions.cancelEdit()
     )).toEqual({
       readonly: true,
@@ -39,13 +39,13 @@ describe('profileSlice', () => {
   })
 
   test('test updateProfile', () => {
-    const state: DeepPartial<ProfileSchema> = {
+    const state: DeepPartial<EditableProfileCardSchema> = {
       form: {
         username: '123'
       }
     }
     expect(profileReducer(
-      state as ProfileSchema,
+      state as EditableProfileCardSchema,
       profileActions.updateProfile({
         username: '123456'
       })
@@ -55,13 +55,13 @@ describe('profileSlice', () => {
   })
 
   test('test update profile service pending', () => {
-    const state: DeepPartial<ProfileSchema> = {
+    const state: DeepPartial<EditableProfileCardSchema> = {
       isLoading: true,
       error: 'some text'
     }
 
     expect(profileReducer(
-      state as ProfileSchema,
+      state as EditableProfileCardSchema,
       updateProfileData.pending
     )).toEqual({
       isLoading: true,

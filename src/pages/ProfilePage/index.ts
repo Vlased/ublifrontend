@@ -1,3 +1,3 @@
 export { ProfilePageAsync as ProfilePage } from './ui/ProfilePage.async'
-export { getProfileData } from './model/selectors/getProfileData/getProfileData'
-export { profileReducer } from './model/slice/profileSlice'
+export { getProfileData } from '../../features/EditableProfileCard/model/selectors/getProfileData/getProfileData'
+export type { Profile } from './model/types/profile'
