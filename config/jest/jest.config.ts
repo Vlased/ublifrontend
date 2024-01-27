@@ -29,5 +29,14 @@ export default {
   moduleNameMapper: {
     '\\.(css|less|scss)$': 'identity-obj-proxy',
     '\\.svg': '<rootDir>/config/jest/jestEmptySvg.tsx'
-  }
+  },
+  reporters: [
+    'default',
+    ['jest-html-reporters', {
+      publicPath: '<rootDir>/reports/unit',
+      filename: 'report.html',
+      openReport: true,
+      inlineSource: true
+    }]
+  ]
 }
