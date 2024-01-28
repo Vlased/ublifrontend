@@ -76,7 +76,9 @@ export const EditableProfileCard: FC<EditableProfileCardProps> = memo(({ id }) =
   }, [dispatch])
 
   useInitialEffect(() => {
-    dispatch(fetchProfileData(id))
+    if (id) {
+      dispatch(fetchProfileData(id))
+    }
   })
 
   return (
@@ -86,6 +88,7 @@ export const EditableProfileCard: FC<EditableProfileCardProps> = memo(({ id }) =
         <Text
           theme={TextTheme.ERROR}
           key={validateError}
+          data-testid="EditableProfileCard.Error"
         >
           {validateErrorsTranslates[validateError]}
         </Text>

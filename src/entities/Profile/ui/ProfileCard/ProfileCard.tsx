@@ -91,6 +91,7 @@ export const ProfileCard: FC<ProfileCardProps> = ({
         className={styles.input}
         readonly={readonly}
         onChange={handleFirstNameChange}
+        data-testid="ProfileCard.FirstName"
       />
       <Input
         value={formData?.lastName}
@@ -98,6 +99,7 @@ export const ProfileCard: FC<ProfileCardProps> = ({
         className={styles.input}
         readonly={readonly}
         onChange={handleLastNameChange}
+        data-testid="ProfileCard.LastName"
       />
       <Input
         value={formData?.age}

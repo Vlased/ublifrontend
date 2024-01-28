@@ -28,6 +28,7 @@ interface TextProps {
   theme?: TextTheme
   align?: TextAlign
   size?: TextSize
+  'data-testid'?: string
 }
 
 type HeaderTagType = 'h1' | 'h2' | 'h3'
@@ -44,7 +45,8 @@ export const Text: FC<TextProps> = memo(({
   children,
   theme = TextTheme.PRIMARY,
   align = TextAlign.LEFT,
-  size = TextSize.M
+  size = TextSize.M,
+  'data-testid': dataTestId = 'Text'
 }) => {
   const { t } = useTranslation()
 
@@ -53,12 +55,18 @@ export const Text: FC<TextProps> = memo(({
   return (
     <div className={classNames([className, styles[theme], styles[align], styles[size]])}>
       {title !== undefined && (
-        <HeaderTag className={styles.title}>
+        <HeaderTag
+          className={styles.title}
+          data-testid={`${dataTestId}.Header`}
+        >
           {t(title.toString())}
         </HeaderTag>
       )}
       {children !== undefined && (
-        <p className={styles.text}>
+        <p
+          className={styles.text}
+          data-testid={`${dataTestId}.Paragraph`}
+        >
           {t(children.toString())}
         </p>
       )}
