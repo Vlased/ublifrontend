@@ -9,7 +9,7 @@ import { Avatar } from 'shared/ui/Avatar/Avatar'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { Dropdown } from 'shared/ui/Dropdown/Dropdown'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
-import { getAuthData, userActions } from '../../../../entities/User'
+import { getAuthData, isUserAdmin, isUserManager, userActions } from '../../../../entities/User'
 import styles from './Navbar.module.scss'
 
 interface NavbarProps {
@@ -21,6 +21,9 @@ export const Navbar: FC<NavbarProps> = memo(({ className }) => {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState<boolean>(false)
   const dispatch = useDispatch()
   const authData = useSelector(getAuthData)
+  const isAdmin = useSelector(isUserAdmin)
+  const isManager = useSelector(isUserManager)
+  const isAdminPanelAvailable = isAdmin || isManager
 
   const handleModalOpen = useCallback(() => {
     setIsAuthModalOpen(true)
@@ -61,6 +64,12 @@ export const Navbar: FC<NavbarProps> = memo(({ className }) => {
             />
           }
           items={[
+            ...(isAdminPanelAvailable
+              ? [{
+                content: t('Admin Page'),
+                href: RoutePath.admin_panel
+              }]
+              : []),
             {
               content: t('Profile Page'),
               href: RoutePath.profile + authData.id

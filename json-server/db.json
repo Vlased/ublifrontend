@@ -322,15 +322,22 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://www.w3schools.com/w3css/img_avatar3.png"
     },
     {
       "id": "2",
-      "username": "admin2",
-      "password": "1232",
-      "role": "USER",
+      "username": "user",
+      "password": "123",
+      "roles": ["USER"],
       "avatar": "https://miro.medium.com/v2/resize:fit:679/0*ngAthWxOvKZHvsw9"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
+      "avatar": "https://cdn1.iconfinder.com/data/icons/digital-strategy-1/64/manager-business-man-avatar-512.png"
     }
   ],
   "posts": [

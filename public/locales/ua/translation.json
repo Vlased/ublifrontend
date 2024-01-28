@@ -61,5 +61,7 @@
   "Create New Article": "Створити Нову Статтю",
   "Edit Article": "Змінити Статтю",
   "My App": "Мій Додаток",
-  "Select Value": "Виберіть Значення"
+  "Select Value": "Виберіть Значення",
+  "Admin Page": "Адмінка",
+  "You are not allowed to access this page": "У вас немає доступу до цієї сторінки"
 }
