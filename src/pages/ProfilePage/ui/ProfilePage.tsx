@@ -8,7 +8,7 @@ import Page from 'widgets/ui/Page/Page'
 const ProfilePage = memo(() => {
   const { id } = useParams()
 
-  if (!id) {
+  if (!id && PROJECT !== 'storybook') {
     return (
       <VStack justifyContent="center" max>
         <Text title="An unknown error happened" />

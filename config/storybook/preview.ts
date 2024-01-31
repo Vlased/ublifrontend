@@ -1,9 +1,10 @@
 import type { Preview } from '@storybook/react'
 import { Theme } from 'app/providers/ThemeProvider'
-import { RouterDecorator } from 'shared/config/storybook/decorators/RouterDecorator'
-import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator'
-import { StyleDecorator } from 'shared/config/storybook/decorators/StyleDecorator'
 import { ReduxDecorator } from 'shared/config/storybook/decorators/ReduxDecorator'
+import { RouterDecorator } from 'shared/config/storybook/decorators/RouterDecorator'
+import { StyleDecorator } from 'shared/config/storybook/decorators/StyleDecorator'
+import { SuspenseDecorator } from 'shared/config/storybook/decorators/SuspenseDecorator'
+import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator'
 import i18n from './i18n'
 
 const preview: Preview = {
@@ -28,7 +29,8 @@ const preview: Preview = {
     StyleDecorator,
     ThemeDecorator(Theme.LIGHT),
     ReduxDecorator(),
-    RouterDecorator
+    RouterDecorator,
+    SuspenseDecorator,
   ]
 }
 
