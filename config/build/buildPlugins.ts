@@ -1,4 +1,5 @@
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
+import CircularDependencyPlugin from 'circular-dependency-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
 import HMTLWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
@@ -25,7 +26,11 @@ export const buildPlugins = ({ paths, isDev, apiUrl, project }: BuildOptions): w
         { from: paths.locales, to: paths.buildLocales }
       ]
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new CircularDependencyPlugin({
+      exclude: /node_modules/,
+      failOnError: true
+    })
   ]
 
   if (isDev) {
