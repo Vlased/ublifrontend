@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Article, ArticleView } from '../../model/types/article'
+import { Article } from '../../model/types/article'
 import ArticleListItem from './ArticleListItem'
 import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
+import { ArticleView } from '../../model/const/const'
 
 const article = {
   id: '1',

@@ -8,6 +8,7 @@ import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { Country } from '../../../../entities/Country'
 import { Currency } from '../../../../entities/Currency'
 import { ProfileCard } from '../../../../entities/Profile'
+import { ValidateProfileErrors } from '../../model/const/validateProfileErrors'
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError'
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm'
 import { getProfileLoading } from '../../model/selectors/getProfileLoading/getProfileLoading'
@@ -15,7 +16,6 @@ import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/get
 import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors'
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData'
 import { profileActions, profileReducer } from '../../model/slice/profileSlice'
-import { ValidateProfileErrors } from '../../model/types/editableProfileCardSchema'
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader'
 
 const reducers: ReducersList = {

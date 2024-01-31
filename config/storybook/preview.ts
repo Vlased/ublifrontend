@@ -30,7 +30,7 @@ const preview: Preview = {
     ThemeDecorator(Theme.LIGHT),
     ReduxDecorator(),
     RouterDecorator,
-    SuspenseDecorator,
+    SuspenseDecorator
   ]
 }
 

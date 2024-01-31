@@ -1,3 +1,4 @@
+import { ArticleBlockType, ArticleView } from '../../model/const/const'
 import { FC, HTMLAttributeAnchorTarget } from 'react'
 import { useTranslation } from 'react-i18next'
 import EyeIcon from 'shared/assets/icons/eye_icon.svg'
@@ -9,7 +10,7 @@ import { Button } from 'shared/ui/Button/Button'
 import { Card } from 'shared/ui/Card/Card'
 import Icon from 'shared/ui/Icon/Icon'
 import { Text } from 'shared/ui/Text/Text'
-import { Article, ArticleBlockText, ArticleBlockType, ArticleView } from '../../model/types/article'
+import { Article, ArticleBlockText } from '../../model/types/article'
 import ArticleTextBlockComponent from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import styles from './ArticleListItem.module.scss'
 

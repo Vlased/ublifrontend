@@ -1,9 +1,9 @@
+import { ArticleSortField } from '../../model/const/const'
 import { FC, memo, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { SortOrder } from 'shared/types/sortingTypes'
 import { ListBox, ListBoxItem } from 'shared/ui/ListBox/ListBox'
 import { HStack } from 'shared/ui/Stack'
-import { ArticleSortField } from '../../model/types/article'
 
 interface ArticleSortSelectorProps {
   sort: ArticleSortField

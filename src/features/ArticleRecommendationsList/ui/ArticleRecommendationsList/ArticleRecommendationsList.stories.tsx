@@ -65,7 +65,7 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     backgroundColor: { control: 'color' }
-  },
+  }
 } as Meta<typeof ArticleRecommendationsList>
 
 export default meta

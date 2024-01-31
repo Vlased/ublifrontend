@@ -1,12 +1,5 @@
 import { Profile } from 'pages/ProfilePage'
-
-export enum ValidateProfileErrors {
-  SERVER_ERROR = 'SERVER_ERROR',
-  NO_PROFILE_DATA = 'NO_PROFILE_DATA',
-  INCORRECT_USER_DATA = 'INCORRECT_USER_DATA',
-  INCORRECT_USER_AGE = 'INCORRECT_USER_AGE',
-  INCORRECT_USER_COUNTRY = 'INCORRECT_USER_COUNTRY',
-}
+import { ValidateProfileErrors } from '../const/validateProfileErrors'
 
 export interface EditableProfileCardSchema {
   data?: Profile
