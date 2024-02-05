@@ -1,5 +1,6 @@
-import { FC, MouseEvent, ReactNode, useCallback, useEffect, useRef, useState } from 'react'
+import { FC, ReactNode } from 'react'
 import { classNames, Mods } from 'shared/lib/classNames/classNames'
+import { useModal } from 'shared/lib/hooks/useModal/useModal'
 import { Overlay } from '../Overlay/Overlay'
 import Portal from '../Portal/Portal'
 import { VStack } from '../Stack'
@@ -14,8 +15,6 @@ interface ModalProps {
   lazy?: boolean
 }
 
-const CLOSING_DELAY = 150
-
 export const Modal: FC<ModalProps> = ({
   className,
   children,
@@ -24,46 +23,15 @@ export const Modal: FC<ModalProps> = ({
   disablePortal,
   lazy
 }) => {
-  const [isClosing, setIsClosing] = useState<boolean>(false)
-  const [isMounted, setIsMounted] = useState<boolean>(false)
-  const timerRef = useRef<ReturnType<typeof setTimeout>>()
-
-  const handleClose = useCallback(() => {
-    if (onClose) {
-      setIsClosing(true)
-      timerRef.current = setTimeout(() => {
-        onClose()
-        setIsClosing(false)
-      }, CLOSING_DELAY)
-    }
-  }, [onClose])
-
-  const handleContentClick = useCallback((e: MouseEvent) => {
-    e.stopPropagation()
-  }, [])
-
-  const onKeyDown = useCallback((e: KeyboardEvent) => {
-    if (e.key === 'Escape') {
-      handleClose()
-    }
-  }, [handleClose])
-
-  useEffect(() => {
-    if (isOpen) {
-      setIsMounted(true)
-    }
-  }, [isOpen])
-
-  useEffect(() => {
-    if (isOpen) {
-      window.addEventListener('keydown', onKeyDown)
-    }
-
-    return () => {
-      clearTimeout(timerRef.current)
-      window.removeEventListener('keydown', onKeyDown)
-    }
-  }, [isOpen, onKeyDown])
+  const {
+    isClosing,
+    isMounted,
+    handleContentClick,
+    handleClose
+  } = useModal({
+    onClose,
+    isOpen
+  })
 
   const mods: Mods = {
     [styles.opened]: isOpen,
