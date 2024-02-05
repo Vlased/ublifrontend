@@ -3,8 +3,9 @@ import { Fragment, ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { DropdownDirection } from 'shared/types/ui'
-import { Button } from '../Button/Button'
-import { HStack } from '../Stack'
+import { Button } from '../../../Button/Button'
+import { HStack } from '../../../Stack'
+import popupStyles from '../../styles/Popup.module.scss'
 import styles from './ListBox.module.scss'
 
 export interface ListBoxItem {
@@ -48,18 +49,18 @@ export const ListBox = <T extends string>({
       )}
       <HListBox
         as="div"
-        className={styles.container}
+        className={popupStyles.container}
         value={value}
         onChange={onChange}
         disabled={readonly}
       >
-        <HListBox.Button className={styles.trigger}>
+        <HListBox.Button className={popupStyles.trigger}>
           <Button disabled={readonly}>
             {t(value ?? defaultValue)}
           </Button>
         </HListBox.Button>
         <HListBox.Options
-          className={classNames([styles.options, styles[direction]])}
+          className={classNames([styles.options, popupStyles[direction]])}
         >
           {items.map((item) => (
             <HListBox.Option
@@ -73,7 +74,7 @@ export const ListBox = <T extends string>({
                   className={classNames(
                     [styles.item],
                     {
-                      [styles.activeItem]: active,
+                      [popupStyles.activeItem]: active,
                       [styles.disabledItem]: item.disabled
                     }
                   )}

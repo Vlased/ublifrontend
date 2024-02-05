@@ -5,11 +5,17 @@ import styles from './Icon.module.scss'
 interface IconProps {
   className?: string
   Svg: FC<SVGProps<SVGSVGElement>>
+  inverted?: boolean
 }
 
-const Icon: FC<IconProps> = ({ className, Svg }) => {
+const Icon: FC<IconProps> = ({ className, Svg, inverted }) => {
   return (
-    <Svg className={classNames([className, styles.icon])} />
+    <Svg
+      className={classNames(
+        [className, styles.icon],
+        { [styles.inverted]: inverted }
+      )}
+    />
   )
 }
 

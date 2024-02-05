@@ -1,0 +1,12 @@
+.notifications {
+  min-height: 150px;
+  max-height: 300px;
+  width: 300px;
+  overflow-y: auto;
+}
+
+.notificationsIcon {
+  width: 25px;
+  height: 25px;
+  fill: var(--inverted-bg-color);
+}

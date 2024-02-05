@@ -9,8 +9,6 @@
 }
 
 .contentContainer {
-  display: flex;
-  margin-right: auto;
   padding-left: 15px;
 }
 
@@ -18,8 +16,12 @@
   width: var(--sidebar-width);
 }
 
-.dropdown {
+.actions {
   margin-left: auto;
   margin-top: 6px;
 }
 
+.icon {
+  width: 20px;
+  height: 20px;
+}

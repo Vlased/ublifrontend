@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Theme } from 'app/providers/ThemeProvider'
-import { User } from '../../../../entities/User'
 import { ReduxDecorator } from 'shared/config/storybook/decorators/ReduxDecorator'
 import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator'
 import { Navbar } from './Navbar'
@@ -37,6 +36,8 @@ export const LoggedIn: Story = {
 
 LoggedIn.decorators = [ReduxDecorator({
   user: {
-    authData: {} as User
+    authData: {
+      avatar: 'https://www.w3schools.com/w3css/img_avatar3.png'
+    }
   }
 })]

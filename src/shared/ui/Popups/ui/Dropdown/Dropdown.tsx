@@ -2,7 +2,8 @@ import { Menu } from '@headlessui/react'
 import { FC, Fragment, ReactNode } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { DropdownDirection } from 'shared/types/ui'
-import { AppLink } from '../AppLink/AppLink'
+import { AppLink } from '../../../AppLink/AppLink'
+import popupStyles from '../../styles/Popup.module.scss'
 import styles from './Dropdown.module.scss'
 
 export interface DropdownItem {
@@ -28,19 +29,19 @@ export const Dropdown: FC<DropdownProps> = ({
   return (
     <Menu
       as="div"
-      className={classNames([styles.container, className])}
+      className={classNames([popupStyles.container, className])}
     >
-      <Menu.Button className={styles.trigger}>
+      <Menu.Button className={popupStyles.trigger}>
         {trigger}
       </Menu.Button>
-      <Menu.Items className={classNames([styles.menu, styles[direction]])}>
+      <Menu.Items className={classNames([styles.menu, popupStyles[direction]])}>
         {items.map((item, index) => {
           const content = ({ active }: { active: boolean }) => (
             <button
               onClick={item.onClick}
               className={classNames(
                 [styles.item],
-                { [styles.active]: active }
+                { [popupStyles.activeItem]: active }
               )}
               disabled={item.disabled}
               type="button"
