@@ -1,6 +1,8 @@
 import { FC, MouseEvent, ReactNode, useCallback, useEffect, useRef, useState } from 'react'
 import { classNames, Mods } from 'shared/lib/classNames/classNames'
+import { Overlay } from '../Overlay/Overlay'
 import Portal from '../Portal/Portal'
+import { VStack } from '../Stack'
 import styles from './Modal.module.scss'
 
 interface ModalProps {
@@ -77,16 +79,21 @@ export const Modal: FC<ModalProps> = ({
       disablePortal={disablePortal}
       element={document.getElementById('app') ?? undefined}
     >
-      <div className={classNames([styles.modal, className], mods)}>
-        <div className={styles.overlay} onClick={handleClose}>
-          <div
-            className={styles.content}
-            onClick={handleContentClick}
-          >
-            {children}
-          </div>
+      <VStack
+        className={classNames([styles.modal, className], mods)}
+        justifyContent="center"
+      >
+        <Overlay
+          className={styles.overlay}
+          handleClick={handleClose}
+        />
+        <div
+          className={styles.content}
+          onClick={handleContentClick}
+        >
+          {children}
         </div>
-      </div>
+      </VStack>
     </Portal>
   )
 }
