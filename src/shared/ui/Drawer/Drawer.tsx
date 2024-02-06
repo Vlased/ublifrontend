@@ -1,6 +1,6 @@
 import { FC, ReactNode, useCallback, useEffect } from 'react'
 import { classNames, Mods } from '@/shared/lib/classNames/classNames'
-import { useAnimationLibs } from '@/shared/lib/components/AnimationProvider/AnimationProvider'
+import { AnimationProvider, useAnimationLibs } from '@/shared/lib/components/AnimationProvider/AnimationProvider'
 import { useModal } from '@/shared/lib/hooks/useModal/useModal'
 import { Overlay } from '../Overlay/Overlay'
 import Portal from '../Portal/Portal'
@@ -116,7 +116,7 @@ const DrawerContent: FC<DrawerProps> = ({
   )
 }
 
-export const Drawer: FC<DrawerProps> = (props) => {
+const DrawerAsync: FC<DrawerProps> = (props) => {
   const { isLoaded } = useAnimationLibs()
 
   if (!isLoaded) {
@@ -127,3 +127,12 @@ export const Drawer: FC<DrawerProps> = (props) => {
     <DrawerContent {...props} />
   )
 }
+
+export const Drawer: FC<DrawerProps> = (props) => {
+  return (
+    <AnimationProvider>
+      <DrawerAsync {...props} />
+    </AnimationProvider>
+  )
+}
+
