@@ -1,6 +1,7 @@
 import { FC, memo, useCallback, useState } from 'react'
 import { BrowserView, MobileView } from 'react-device-detect'
 import NotificationsIcon from 'shared/assets/icons/notifications_icon.svg'
+import { AnimationProvider } from 'shared/lib/components/AnimationProvider/AnimationProvider'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { Drawer } from 'shared/ui/Drawer/Drawer'
 import Icon from 'shared/ui/Icon/Icon'
@@ -42,12 +43,14 @@ export const NotificationButton: FC<NotificationButtonProps> = memo(({ className
       </BrowserView>
       <MobileView>
         {trigger}
-        <Drawer
-          isOpen={isDrawerOpen}
-          onClose={toggleDrawer}
-        >
-          <NotificationList />
-        </Drawer>
+        <AnimationProvider>
+          <Drawer
+            isOpen={isDrawerOpen}
+            onClose={toggleDrawer}
+          >
+            <NotificationList />
+          </Drawer>
+        </AnimationProvider>
       </MobileView>
     </>
   )
