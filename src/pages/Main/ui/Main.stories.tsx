@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from 'app/providers/ThemeProvider'
-import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator'
+import { Theme } from '@/app/providers/ThemeProvider'
+import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
 import { MainAsync as Main } from './Main.async'
 
 const meta = {

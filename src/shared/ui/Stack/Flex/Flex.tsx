@@ -1,5 +1,5 @@
 import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import styles from './Flex.module.scss'
 
 export type FlexJustify = 'space-between' | 'center' | 'space-evenly' | 'space-around' | 'flex-start' | 'flex-end'

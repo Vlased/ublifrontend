@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react'
-import { classNames, Mods } from 'shared/lib/classNames/classNames'
-import { useModal } from 'shared/lib/hooks/useModal/useModal'
+import { classNames, Mods } from '@/shared/lib/classNames/classNames'
+import { useModal } from '@/shared/lib/hooks/useModal/useModal'
 import { Overlay } from '../Overlay/Overlay'
 import Portal from '../Portal/Portal'
 import { VStack } from '../Stack'
@@ -51,10 +51,7 @@ export const Modal: FC<ModalProps> = ({
         className={classNames([styles.modal, className], mods)}
         justifyContent="center"
       >
-        <Overlay
-          className={styles.overlay}
-          handleClick={handleClose}
-        />
+        <Overlay handleClick={handleClose}/>
         <div
           className={styles.content}
           onClick={handleContentClick}

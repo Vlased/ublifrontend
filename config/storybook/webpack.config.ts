@@ -1,3 +1,4 @@
+import { buildResolvers } from 'config/build/buildResolvers';
 import path from 'path';
 import webpack, { DefinePlugin, RuleSetRule } from "webpack";
 import { BuildPaths } from './../build/types/config';
@@ -56,12 +57,15 @@ export default ({ config }: { config: webpack.Configuration }) => {
     });
   }
 
+  if(config?.resolve) {
+    config.resolve = buildResolvers({ paths })
+  }
+
   config.plugins?.push(new DefinePlugin({
     IS_DEV: JSON.stringify(true),
     API: JSON.stringify('https://someapi.com'),
     PROJECT: JSON.stringify('storybook'),
   }))
-
 
   return config
 }

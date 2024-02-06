@@ -1,7 +1,7 @@
 import { FC, memo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink'
 import { SidebarItemType } from '../../model/types/sidebar'
 import styles from './SidebarItem.module.scss'
 

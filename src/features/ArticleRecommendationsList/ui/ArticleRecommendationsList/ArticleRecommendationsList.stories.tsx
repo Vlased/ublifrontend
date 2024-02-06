@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from 'app/providers/ThemeProvider'
-import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator'
-import { Article, ArticleBlockType, ArticleType } from '../../../../entities/Article'
+import { Theme } from '@/app/providers/ThemeProvider'
+import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
+import { Article, ArticleBlockType, ArticleType } from '@/entities/Article'
 import { ArticleRecommendationsList } from './ArticleRecommendationsList'
 
 const article: Article = {

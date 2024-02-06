@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from 'app/providers/ThemeProvider'
-import { Article, ArticleType, ArticleBlockType } from '../../../../entities/Article'
-import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator'
+import { Theme } from '@/app/providers/ThemeProvider'
+import { Article, ArticleType, ArticleBlockType } from '@/entities/Article'
+import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
 import { ArticleDetailsPageAsync as ArticleDetailsPage } from './ArticleDetailsPage.async'
-import { ReduxDecorator } from 'shared/config/storybook/decorators/ReduxDecorator'
+import { ReduxDecorator } from '@/shared/config/storybook/decorators/ReduxDecorator'
 
 const article: Article = {
   id: '1',

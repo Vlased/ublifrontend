@@ -1,8 +1,8 @@
-import { useTheme } from 'app/providers/ThemeProvider'
+import { useTheme } from '@/app/providers/ThemeProvider'
 import { FC, memo } from 'react'
-import FigmaIcon from 'shared/assets/icons/figma_icon.svg'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { Button, ButtonTheme } from 'shared/ui/Button/Button'
+import FigmaIcon from '@/shared/assets/icons/figma_icon.svg'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { Button, ButtonTheme } from '@/shared/ui/Button/Button'
 import styles from './ThemeSwitcher.module.scss'
 
 interface ThemeSwitcherProps {

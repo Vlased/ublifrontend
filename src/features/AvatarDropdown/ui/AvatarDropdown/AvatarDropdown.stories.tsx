@@ -1,5 +1,5 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/react'
-import { ReduxDecorator } from 'shared/config/storybook/decorators/ReduxDecorator'
+import { ReduxDecorator } from '@/shared/config/storybook/decorators/ReduxDecorator'
 import { AvatarDropdown } from './AvatarDropdown'
 
 const meta = {

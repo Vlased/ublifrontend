@@ -1,4 +1,4 @@
-import { Profile } from 'pages/ProfilePage'
+import { Profile } from '@/pages/ProfilePage'
 import { ValidateProfileErrors } from '../const/validateProfileErrors'
 
 export interface EditableProfileCardSchema {

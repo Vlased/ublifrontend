@@ -3,9 +3,9 @@ import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { RoutePath } from 'shared/config/routeConfig/routeConfig'
-import { Button } from 'shared/ui/Button/Button'
-import { getArticleDetailsData } from '../../../../entities/Article'
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
+import { Button } from '@/shared/ui/Button/Button'
+import { getArticleDetailsData } from '@/entities/Article'
 import styles from './ArticleDetailsPageHeader.module.scss'
 
 const ArticleDetailsPageHeader = () => {

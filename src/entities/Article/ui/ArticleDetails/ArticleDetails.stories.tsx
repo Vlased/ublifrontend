@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Article } from '../../model/types/article'
-import { ReduxDecorator } from 'shared/config/storybook/decorators/ReduxDecorator'
+import { ReduxDecorator } from '@/shared/config/storybook/decorators/ReduxDecorator'
 import { ArticleDetails } from './ArticleDetails'
-import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator'
-import { Theme } from 'app/providers/ThemeProvider'
+import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
+import { Theme } from '@/app/providers/ThemeProvider'
 import { ArticleBlockType, ArticleType } from '../../model/const/const'
 
 const article: Article = {
