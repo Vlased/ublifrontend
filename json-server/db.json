@@ -344,21 +344,27 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://www.w3schools.com/w3css/img_avatar3.png"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://miro.medium.com/v2/resize:fit:679/0*ngAthWxOvKZHvsw9"
     },
     {
       "id": "3",
       "username": "manager",
       "password": "123",
-      "roles": ["MANAGER"],
+      "roles": [
+        "MANAGER"
+      ],
       "avatar": "https://cdn1.iconfinder.com/data/icons/digital-strategy-1/64/manager-business-man-avatar-512.png"
     }
   ],
@@ -394,6 +400,21 @@
       "city": "Los Angeles",
       "username": "admin2",
       "avatar": "https://miro.medium.com/v2/resize:fit:679/0*ngAthWxOvKZHvsw9"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "good article",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 2,
+      "userId": "1",
+      "articleId": "2"
     }
   ]
 }

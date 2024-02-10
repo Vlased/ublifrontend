@@ -118,7 +118,7 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo(({ id }) => {
     )
   } else {
     content = (
-      <>
+      <div className={styles.container}>
         <div className={styles.avatarContainer}>
           <Avatar
             size={200}
@@ -152,7 +152,7 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo(({ id }) => {
           </Text>
         </div>
         {article?.blocks?.map(renderBlock)}
-      </>
+      </div>
     )
   }
 
