@@ -54,7 +54,10 @@ export const ListBox = <T extends string>({
         onChange={onChange}
         disabled={readonly}
       >
-        <HListBox.Button className={popupStyles.trigger}>
+        <HListBox.Button
+          as="div"
+          className={popupStyles.trigger}
+        >
           <Button disabled={readonly}>
             {t(value ?? defaultValue)}
           </Button>

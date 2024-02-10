@@ -31,7 +31,10 @@ export const Dropdown: FC<DropdownProps> = ({
       as="div"
       className={classNames([popupStyles.container, className])}
     >
-      <Menu.Button className={popupStyles.trigger}>
+      <Menu.Button
+        as="div"
+        className={popupStyles.trigger}
+      >
         {trigger}
       </Menu.Button>
       <Menu.Items className={classNames([styles.menu, popupStyles[direction]])}>
