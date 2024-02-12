@@ -5,7 +5,7 @@ import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecora
 import ArticleSortSelector from './ArticleSortSelector'
 
 const meta = {
-  title: 'entities/ArticleSortSelector',
+  title: 'entities/Article/ArticleSortSelector',
   component: ArticleSortSelector,
   parameters: {
     layout: 'centered'

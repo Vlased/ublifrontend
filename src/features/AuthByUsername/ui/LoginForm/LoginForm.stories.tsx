@@ -5,7 +5,7 @@ import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecora
 import LoginForm from './LoginForm'
 
 const meta = {
-  title: 'features/LoginForm',
+  title: 'features/AuthByUsername/LoginForm',
   component: LoginForm,
   parameters: {
     layout: 'centered'

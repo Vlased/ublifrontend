@@ -12,7 +12,7 @@ const item = {
 }
 
 const meta = {
-  title: 'entities/NotificationItem',
+  title: 'entities/Notification/NotificationItem',
   component: NotificationItem,
   parameters: {
     layout: 'centered'

@@ -20,7 +20,7 @@ const currencyOptions: ListBoxItem[] = [
 ]
 
 const meta = {
-  title: 'shared/ListBox',
+  title: 'shared/Popups/ListBox',
   component: ListBox,
   parameters: {
     layout: 'centered'

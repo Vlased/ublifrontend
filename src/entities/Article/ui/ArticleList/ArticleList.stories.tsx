@@ -67,7 +67,7 @@ const article = {
 const articles = new Array(16).fill(0).map((item, idx) => ({ ...article, id: idx.toString() }))
 
 const meta = {
-  title: 'entities/ArticleList',
+  title: 'entities/Article/ArticleList',
   component: ArticleList,
   parameters: {
     layout: 'centered'

@@ -4,7 +4,7 @@ import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecora
 import ArticlesPageFilters from './ArticlesPageFilters'
 
 const meta = {
-  title: 'pages/ArticlesPageFilters',
+  title: 'pages/ArticlesPage/ArticlesPageFilters',
   component: ArticlesPageFilters,
   parameters: {
     layout: 'centered'

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Flex } from './Flex'
 
 const meta = {
-  title: 'shared/Flex',
+  title: 'shared/Stack/Flex',
   component: Flex,
   parameters: {
     layout: 'centered'

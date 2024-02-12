@@ -4,7 +4,7 @@ import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecora
 import CommentCard from './CommentCard'
 
 const meta = {
-  title: 'entities/CommentCard',
+  title: 'entities/Comment/CommentCard',
   component: CommentCard,
   parameters: {
     layout: 'centered'

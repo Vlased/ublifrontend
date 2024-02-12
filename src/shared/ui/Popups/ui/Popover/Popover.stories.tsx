@@ -5,7 +5,7 @@ import { Button, ButtonTheme } from '../../../Button/Button'
 import { Popover } from './Popover'
 
 const meta = {
-  title: 'shared/Popover',
+  title: 'shared/Popups/Popover',
   component: Popover,
   parameters: {
     layout: 'centered'

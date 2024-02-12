@@ -58,7 +58,12 @@ export default ({ config }: { config: webpack.Configuration }) => {
   }
 
   if(config?.resolve) {
-    config.resolve = buildResolvers({ paths })
+    config.resolve = {
+      ...config.resolve,
+      alias: {
+        '@': paths.src
+      }
+    }
   }
 
   config.plugins?.push(new DefinePlugin({

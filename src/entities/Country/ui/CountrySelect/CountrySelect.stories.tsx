@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import CountrySelect from './CountrySelect'
 
 const meta = {
-  title: 'entities/CountrySelect',
+  title: 'entities/Country/CountrySelect',
   component: CountrySelect,
   parameters: {
     layout: 'centered'

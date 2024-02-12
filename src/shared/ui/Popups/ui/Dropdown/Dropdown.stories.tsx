@@ -18,7 +18,7 @@ const currencyOptions: DropdownItem[] = [
 ]
 
 const meta = {
-  title: 'shared/Dropdown',
+  title: 'shared/Popups/Dropdown',
   component: Dropdown,
   parameters: {
     layout: 'centered'
