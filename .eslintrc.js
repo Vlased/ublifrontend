@@ -79,6 +79,7 @@ module.exports = module.exports = {
    "@typescript-eslint/no-invalid-void-type": 'off',
    "@typescript-eslint/no-empty-interface": 'off',
    'n/no-callback-literal': 'off',
-   'ubli-plugin/path-checker': ['error', { alias: '@' }]
+   'ubli-plugin/path-checker': ['error', { alias: '@' }],
+   'ubli-plugin/check-public-api-imports': ['error', { alias: '@' }]
   }
 }

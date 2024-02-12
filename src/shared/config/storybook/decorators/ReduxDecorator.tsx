@@ -5,7 +5,7 @@ import { addCommentFormReducer } from '@/features/AddCommentForm'
 import { loginReducer } from '@/features/AuthByUsername'
 import { profileReducer } from '@/features/EditableProfileCard'
 import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage'
-import { articlesPageReducer } from '@/pages/ArticlesPage/model/slice/articlesPageSlice'
+import { articlesPageReducer } from '@/pages/ArticlesPage'
 import { ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { articleDetailsReducer } from '@/entities/Article'
 

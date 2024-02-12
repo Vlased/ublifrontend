@@ -1,8 +1,4 @@
-import { ArticleBlockType, ArticleView } from '../../model/const/const'
-import { FC, HTMLAttributeAnchorTarget } from 'react'
-import { useTranslation } from 'react-i18next'
 import EyeIcon from '@/shared/assets/icons/eye_icon.svg'
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { AppLink } from '@/shared/ui/AppLink/AppLink'
 import { Avatar } from '@/shared/ui/Avatar/Avatar'
@@ -10,6 +6,9 @@ import { Button } from '@/shared/ui/Button/Button'
 import { Card } from '@/shared/ui/Card/Card'
 import Icon from '@/shared/ui/Icon/Icon'
 import { Text } from '@/shared/ui/Text/Text'
+import { FC, HTMLAttributeAnchorTarget } from 'react'
+import { useTranslation } from 'react-i18next'
+import { ArticleBlockType, ArticleView } from '../../model/const/const'
 import { Article, ArticleBlockText } from '../../model/types/article'
 import ArticleTextBlockComponent from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import styles from './ArticleListItem.module.scss'
@@ -82,7 +81,7 @@ const ArticleListItem: FC<ArticleListItemProps> = ({ className, article, view, t
           )}
           <div className={styles.footer}>
             <AppLink
-              to={RoutePath.article_details + article.id}
+              to={`/articles/${article.id}`}
               target={target}
             >
               <Button>
@@ -99,7 +98,7 @@ const ArticleListItem: FC<ArticleListItemProps> = ({ className, article, view, t
   return (
     <AppLink
       className={classNames([styles[view], className])}
-      to={RoutePath.article_details + article.id}
+      to={`/articles/${article.id}`}
       target={target}
     >
       <Card>

@@ -16,7 +16,7 @@ interface PageProps {
   handleEndScroll?: () => void
 }
 
-const Page: FC<PageProps> = ({ className, children, handleEndScroll }) => {
+export const Page: FC<PageProps> = ({ className, children, handleEndScroll }) => {
   const triggerRef = useRef() as MutableRefObject<HTMLDivElement>
   const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>
   const dispatch = useAppDispatch()
@@ -59,5 +59,3 @@ const Page: FC<PageProps> = ({ className, children, handleEndScroll }) => {
     </main>
   )
 }
-
-export default Page
