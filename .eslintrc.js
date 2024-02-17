@@ -11,8 +11,8 @@ module.exports = module.exports = {
     jest: true
   },
   extends: [
-    'standard-with-typescript', 
-    'plugin:react/recommended', 
+    'standard-with-typescript',
+    'plugin:react/recommended',
     'plugin:storybook/recommended',
     'plugin:i18next/recommended',
   ],
@@ -76,10 +76,16 @@ module.exports = module.exports = {
         "checksVoidReturn": false
       }
     ],
-   "@typescript-eslint/no-invalid-void-type": 'off',
-   "@typescript-eslint/no-empty-interface": 'off',
-   'n/no-callback-literal': 'off',
-   'ubli-plugin/path-checker': ['error', { alias: '@' }],
-   'ubli-plugin/check-public-api-imports': ['error', { alias: '@' }]
+    "@typescript-eslint/no-invalid-void-type": 'off',
+    "@typescript-eslint/no-empty-interface": 'off',
+    'n/no-callback-literal': 'off',
+    'ubli-plugin/path-checker': ['error', { alias: '@' }],
+    'ubli-plugin/check-public-api-imports': [
+      'error',
+      {
+        alias: '@',
+        testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/ReduxDecorator.tsx']
+      }
+    ]
   }
 }
