@@ -1,6 +1,6 @@
 import { getArticleDetailsData } from '@/entities/Article'
 import { RoutePath } from '@/shared/constants/router'
-import { Button } from '@/shared/ui/Button/Button'
+import { Button } from '@/shared/ui/Button'
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'

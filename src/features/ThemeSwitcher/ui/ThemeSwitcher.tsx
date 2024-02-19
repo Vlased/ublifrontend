@@ -1,7 +1,7 @@
 import FigmaIcon from '@/shared/assets/icons/figma_icon.svg'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme'
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button'
+import { Button, ButtonTheme } from '@/shared/ui/Button'
 import { FC, memo } from 'react'
 import styles from './ThemeSwitcher.module.scss'
 

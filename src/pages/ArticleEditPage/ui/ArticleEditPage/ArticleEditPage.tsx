@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import { Text } from '@/shared/ui/Text/Text'
+import { Text } from '@/shared/ui/Text'
 import { Page } from '@/widgets/Page'
 
 const ArticleEditPage = () => {

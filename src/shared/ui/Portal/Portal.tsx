@@ -7,7 +7,7 @@ interface PortalProps {
   disablePortal?: boolean
 }
 
-const Portal: FC<PortalProps> = ({ children, element = document.body, disablePortal }) => {
+export const Portal: FC<PortalProps> = ({ children, element = document.body, disablePortal }) => {
   if (disablePortal) {
     return (
       <>
@@ -18,5 +18,3 @@ const Portal: FC<PortalProps> = ({ children, element = document.body, disablePor
 
   return createPortal(children, element)
 }
-
-export default Portal

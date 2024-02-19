@@ -1,4 +1,3 @@
-import { buildResolvers } from 'config/build/buildResolvers';
 import path from 'path';
 import webpack, { DefinePlugin, RuleSetRule } from "webpack";
 import { BuildPaths } from './../build/types/config';

@@ -1,7 +1,7 @@
 import { FC, memo, useCallback, useMemo, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button/Button'
+import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button'
 import { Flex, VStack } from '@/shared/ui/Stack'
 import { getAuthData } from '@/entities/User'
 import { LangSwitcher } from '@/features/LangSwitcher'

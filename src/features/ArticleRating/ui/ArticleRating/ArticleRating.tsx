@@ -1,6 +1,6 @@
 import { Rating } from '@/entities/Rating'
 import { getAuthData } from '@/entities/User'
-import { Skeleton } from '@/shared/ui/Skeleton/Skeleton'
+import { Skeleton } from '@/shared/ui/Skeleton'
 import { FC, memo, useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import { useGetArticleRating, useRateArticle } from '../../api/articleRatingApi'

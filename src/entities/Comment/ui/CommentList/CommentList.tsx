@@ -1,5 +1,5 @@
 import { FC, memo } from 'react'
-import { Text } from '@/shared/ui/Text/Text'
+import { Text } from '@/shared/ui/Text'
 import { Comment } from '../../model/types/comment'
 import CommentCard from '../CommentCard/CommentCard'
 import styles from './CommentList.module.scss'

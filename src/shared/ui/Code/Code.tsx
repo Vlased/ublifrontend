@@ -1,7 +1,7 @@
 import { FC, useCallback } from 'react'
 import CopyIcon from '@/shared/assets/icons/copy_icon.svg'
 import { Button, ButtonTheme } from '../Button/Button'
-import Icon from '../Icon/Icon'
+import { Icon } from '../Icon'
 import styles from './Code.module.scss'
 
 interface CodeProps {

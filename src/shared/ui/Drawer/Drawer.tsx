@@ -3,7 +3,7 @@ import { classNames, Mods } from '@/shared/lib/classNames/classNames'
 import { AnimationProvider, useAnimationLibs } from '@/shared/lib/components/AnimationProvider/AnimationProvider'
 import { useModal } from '@/shared/lib/hooks/useModal/useModal'
 import { Overlay } from '../Overlay/Overlay'
-import Portal from '../Portal/Portal'
+import { Portal } from '../Portal'
 import { VStack } from '../Stack'
 import styles from './Drawer.module.scss'
 

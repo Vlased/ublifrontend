@@ -2,7 +2,7 @@ import { EditableProfileCard } from '@/features/EditableProfileCard'
 import { memo } from 'react'
 import { useParams } from 'react-router-dom'
 import { VStack } from '@/shared/ui/Stack'
-import { Text } from '@/shared/ui/Text/Text'
+import { Text } from '@/shared/ui/Text'
 import { Page } from '@/widgets/Page'
 
 const ProfilePage = memo(() => {
