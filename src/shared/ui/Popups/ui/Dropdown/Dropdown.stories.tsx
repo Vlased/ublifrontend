@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/app/providers/ThemeProvider'
+import { Theme } from '@/shared/constants/theme'
 import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
-import { Currency } from '@/entities/Currency'
 import { Button } from '../../../Button/Button'
 import { Dropdown, DropdownItem } from './Dropdown'
+import { Currency } from '@/shared/constants/currency'
 
 const currencyOptions: DropdownItem[] = [
   {

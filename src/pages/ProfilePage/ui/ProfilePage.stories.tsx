@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/app/providers/ThemeProvider'
-import { Country } from '@/entities/Country'
-import { Currency } from '@/entities/Currency'
+import { Theme } from '@/shared/constants/theme'
 import { ReduxDecorator } from '@/shared/config/storybook/decorators/ReduxDecorator'
 import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
 import { ProfilePageAsync as ProfilePage } from './ProfilePage.async'
+import { Currency } from '@/shared/constants/currency'
+import { Country } from '@/shared/constants/country'
 
 const meta = {
   title: 'pages/ProfilePage',

@@ -1,6 +1,6 @@
 import { FC, memo, useCallback } from 'react'
 import { ListBox, ListBoxItem } from '@/shared/ui/Popups'
-import { Currency } from '../../model/const/currency'
+import { Currency } from '@/shared/constants/currency'
 
 const currencyOptions: ListBoxItem[] = [
   {

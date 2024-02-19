@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/app/providers/ThemeProvider'
+import { Theme } from '@/shared/constants/theme'
 import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
-import { Currency } from '@/entities/Currency'
 import { ListBox, ListBoxItem } from './ListBox'
+import { Currency } from '@/shared/constants/currency'
 
 const currencyOptions: ListBoxItem[] = [
   {

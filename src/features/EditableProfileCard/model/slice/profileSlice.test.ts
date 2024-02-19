@@ -1,8 +1,8 @@
 import { profileActions, profileReducer } from './profileSlice'
-import { Country } from '@/entities/Country'
-import { Currency } from '@/entities/Currency'
 import { updateProfileData } from '../services/updateProfileData/updateProfileData'
 import { EditableProfileCardSchema } from '../types/editableProfileCardSchema'
+import { Currency } from '@/shared/constants/currency'
+import { Country } from '@/shared/constants/country'
 
 const data = {
   firstName: 'firstName',

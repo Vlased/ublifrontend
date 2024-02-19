@@ -1,5 +1,5 @@
+import { Theme } from '@/shared/constants/theme'
 import { StoryFn } from '@storybook/react'
-import { Theme } from '../../../../app/providers/ThemeProvider'
 
 // eslint-disable-next-line
 export const ThemeDecorator = (theme: Theme) => (Story: StoryFn) => (

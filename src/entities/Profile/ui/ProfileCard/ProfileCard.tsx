@@ -1,4 +1,3 @@
-import { Profile } from '@/pages/ProfilePage'
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { classNames } from '@/shared/lib/classNames/classNames'
@@ -7,9 +6,12 @@ import { Input } from '@/shared/ui/Input/Input'
 import { Loader } from '@/shared/ui/Loader/Loader'
 import { VStack } from '@/shared/ui/Stack'
 import { Text, TextAlign, TextTheme } from '@/shared/ui/Text/Text'
-import { Country, CountrySelect } from '@/entities/Country'
-import { Currency, CurrencySelect } from '@/entities/Currency'
+import { CountrySelect } from '@/entities/Country'
+import { CurrencySelect } from '@/entities/Currency'
 import styles from './ProfileCard.module.scss'
+import { Currency } from '@/shared/constants/currency'
+import { Country } from '@/shared/constants/country'
+import { Profile } from '@/shared/types/profile'
 
 interface ProfileCardProps {
   formData?: Profile

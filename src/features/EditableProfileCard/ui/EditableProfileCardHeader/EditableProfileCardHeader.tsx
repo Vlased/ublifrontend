@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import { getProfileData } from '@/pages/ProfilePage'
 import { useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'

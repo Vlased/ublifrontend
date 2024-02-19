@@ -86,6 +86,13 @@ module.exports = module.exports = {
         alias: '@',
         testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/ReduxDecorator.tsx']
       }
+    ],
+    'ubli-plugin/layer-imports': [
+      'error',
+      {
+        alias: '@',
+        ignoreImportPatterns: ['**/StoreProvider', '**/testing']
+      }
     ]
   }
 }

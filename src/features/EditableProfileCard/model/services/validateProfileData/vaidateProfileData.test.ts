@@ -1,5 +1,5 @@
-import { Country } from '@/entities/Country'
-import { Currency } from '@/entities/Currency'
+import { Country } from '@/shared/constants/country'
+import { Currency } from '@/shared/constants/currency'
 import { ValidateProfileErrors } from '../../const/validateProfileErrors'
 import { validateProfileData } from './validateProfileData'
 

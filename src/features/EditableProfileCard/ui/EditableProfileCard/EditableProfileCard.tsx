@@ -5,8 +5,6 @@ import DynamicModuleLoader, { ReducersList } from '@/shared/lib/components/Dynam
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { Text, TextTheme } from '@/shared/ui/Text/Text'
-import { Country } from '@/entities/Country'
-import { Currency } from '@/entities/Currency'
 import { ProfileCard } from '@/entities/Profile'
 import { ValidateProfileErrors } from '../../model/const/validateProfileErrors'
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError'
@@ -17,6 +15,8 @@ import { getProfileValidateErrors } from '../../model/selectors/getProfileValida
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData'
 import { profileActions, profileReducer } from '../../model/slice/profileSlice'
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader'
+import { Currency } from '@/shared/constants/currency'
+import { Country } from '@/shared/constants/country'
 
 const reducers: ReducersList = {
   profile: profileReducer

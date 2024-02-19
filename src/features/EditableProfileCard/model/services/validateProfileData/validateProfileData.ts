@@ -1,4 +1,4 @@
-import { Profile } from '@/pages/ProfilePage'
+import { Profile } from '@/shared/types/profile'
 import { ValidateProfileErrors } from '../../const/validateProfileErrors'
 
 export const validateProfileData = (profile?: Profile) => {

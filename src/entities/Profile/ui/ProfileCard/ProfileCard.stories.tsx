@@ -1,6 +1,6 @@
+import { Country } from '@/shared/constants/country'
+import { Currency } from '@/shared/constants/currency'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Country } from '../../../Country'
-import { Currency } from '../../../Currency'
 import { ProfileCard } from './ProfileCard'
 
 const meta = {

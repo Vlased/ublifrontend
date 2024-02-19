@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react'
 import { profileReducer } from '../../model/slice/profileSlice'
-import { Profile } from '@/pages/ProfilePage'
 import { componentRender } from '@/shared/lib/tests/componentRender/componentRender'
-import { Country } from '@/entities/Country'
-import { Currency } from '@/entities/Currency'
 import { EditableProfileCard } from './EditableProfileCard'
 import userEvent from '@testing-library/user-event'
 import { $api } from '@/shared/api/api'
+import { Currency } from '@/shared/constants/currency'
+import { Country } from '@/shared/constants/country'
+import { Profile } from '@/shared/types/profile'
 
 const data: Profile = {
   id: '1',

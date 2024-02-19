@@ -3,8 +3,8 @@ import { Article } from '../../model/types/article'
 import { ReduxDecorator } from '@/shared/config/storybook/decorators/ReduxDecorator'
 import { ArticleDetails } from './ArticleDetails'
 import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
-import { Theme } from '@/app/providers/ThemeProvider'
 import { ArticleBlockType, ArticleType } from '../../model/const/const'
+import { Theme } from '@/shared/constants/theme'
 
 const article: Article = {
   id: '1',

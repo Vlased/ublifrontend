@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/app/providers/ThemeProvider'
+import { Theme } from '@/shared/constants/theme'
 import { Article, ArticleType, ArticleBlockType } from '@/entities/Article'
 import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
 import { ArticleDetailsPageAsync as ArticleDetailsPage } from './ArticleDetailsPage.async'
