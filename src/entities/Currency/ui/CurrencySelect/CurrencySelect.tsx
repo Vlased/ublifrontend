@@ -1,6 +1,6 @@
-import { FC, memo, useCallback } from 'react'
-import { ListBox, ListBoxItem } from '@/shared/ui/Popups'
 import { Currency } from '@/shared/constants/currency'
+import { ListBox, ListBoxItem } from '@/shared/ui/Popups'
+import { FC, memo } from 'react'
 
 const currencyOptions: ListBoxItem[] = [
   {
@@ -30,17 +30,13 @@ const CurrencySelect: FC<CurrencySelectProps> = memo(({
   onChange,
   readonly
 }) => {
-  const handleChange = useCallback((value: string) => {
-    onChange?.(value as Currency)
-  }, [onChange])
-
   return (
-    <ListBox
+    <ListBox<Currency>
       label="Select Currency"
       defaultValue="Select Currency"
       items={currencyOptions}
       value={value}
-      onChange={handleChange}
+      onChange={onChange}
       readonly={readonly}
       className={className}
       direction="top-right"

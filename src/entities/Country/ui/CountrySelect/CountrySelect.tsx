@@ -1,6 +1,6 @@
-import { FC, memo, useCallback } from 'react'
-import { ListBox, ListBoxItem } from '@/shared/ui/Popups'
 import { Country } from '@/shared/constants/country'
+import { ListBox, ListBoxItem } from '@/shared/ui/Popups'
+import { FC, memo } from 'react'
 
 const countryOptions: ListBoxItem[] = [
   {
@@ -30,17 +30,13 @@ const CountrySelect: FC<CountrySelectProps> = memo(({
   onChange,
   readonly
 }) => {
-  const handleChange = useCallback((value: string) => {
-    onChange?.(value as Country)
-  }, [onChange])
-
   return (
-    <ListBox
+    <ListBox<Country>
       label="Select Country"
       defaultValue="Select Country"
       items={countryOptions}
       value={value}
-      onChange={handleChange}
+      onChange={onChange}
       readonly={readonly}
       className={className}
       direction="top-right"

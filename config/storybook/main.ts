@@ -7,15 +7,15 @@ const config: StorybookConfig = {
     {
       name: '@storybook/addon-essentials',
       options: {
-        backgrounds: false,
-      },
+        backgrounds: false
+      }
     },
     '@storybook/addon-onboarding',
     '@storybook/addon-interactions',
     'storybook-i18n',
     'storybook-react-i18next',
     'storybook-addon-mock',
-    'storybook-addon-themes',
+    'storybook-addon-themes'
   ],
   framework: {
     name: '@storybook/react-webpack5',
