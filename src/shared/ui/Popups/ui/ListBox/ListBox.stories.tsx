@@ -23,7 +23,7 @@ const meta = {
   title: 'shared/Popups/ListBox',
   component: ListBox,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

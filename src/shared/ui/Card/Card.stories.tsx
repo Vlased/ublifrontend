@@ -7,7 +7,7 @@ const meta = {
   title: 'shared/Card',
   component: Card,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

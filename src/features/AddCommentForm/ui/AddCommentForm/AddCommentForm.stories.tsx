@@ -8,7 +8,7 @@ const meta = {
   title: 'features/AddCommentForm',
   component: AddCommentForm,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

@@ -21,7 +21,7 @@ const meta = {
   title: 'shared/Popups/Dropdown',
   component: Dropdown,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

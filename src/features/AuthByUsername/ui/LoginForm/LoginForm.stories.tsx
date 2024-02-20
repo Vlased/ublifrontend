@@ -8,7 +8,7 @@ const meta = {
   title: 'features/AuthByUsername/LoginForm',
   component: LoginForm,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

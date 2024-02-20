@@ -5,7 +5,7 @@ const meta = {
   title: 'entities/Country/CountrySelect',
   component: CountrySelect,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

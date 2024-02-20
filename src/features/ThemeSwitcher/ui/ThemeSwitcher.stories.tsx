@@ -7,7 +7,7 @@ const meta = {
   title: 'widgets/ThemeSwitcher',
   component: ThemeSwitcher,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

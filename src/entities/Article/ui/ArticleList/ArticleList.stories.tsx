@@ -70,7 +70,7 @@ const meta = {
   title: 'entities/Article/ArticleList',
   component: ArticleList,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

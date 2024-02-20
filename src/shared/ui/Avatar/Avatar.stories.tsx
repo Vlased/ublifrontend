@@ -5,7 +5,7 @@ const meta = {
   title: 'shared/Avatar',
   component: Avatar,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

@@ -7,7 +7,7 @@ const meta = {
   title: 'shared/Input',
   component: Input,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

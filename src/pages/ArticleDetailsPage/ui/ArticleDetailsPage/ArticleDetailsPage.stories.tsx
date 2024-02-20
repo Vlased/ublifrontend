@@ -61,7 +61,7 @@ const meta = {
   title: 'pages/ArticleDetailsPage',
   component: ArticleDetailsPage,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

@@ -15,7 +15,7 @@ const meta = {
   title: 'entities/Notification/NotificationItem',
   component: NotificationItem,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

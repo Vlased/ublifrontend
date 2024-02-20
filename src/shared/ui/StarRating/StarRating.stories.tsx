@@ -7,7 +7,7 @@ const meta = {
   title: 'shared/StarRating',
   component: StarRating,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

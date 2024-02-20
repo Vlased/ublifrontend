@@ -8,7 +8,7 @@ const meta = {
   title: 'entities/Article/ArticleSortSelector',
   component: ArticleSortSelector,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

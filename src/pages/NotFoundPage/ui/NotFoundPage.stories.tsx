@@ -7,7 +7,7 @@ const meta = {
   title: 'pages/NotFoundPage',
   component: NotFoundPage,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

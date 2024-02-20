@@ -7,7 +7,7 @@ const meta = {
   title: 'entities/Rating',
   component: Rating,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

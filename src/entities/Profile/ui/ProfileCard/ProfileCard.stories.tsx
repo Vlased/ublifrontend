@@ -7,7 +7,7 @@ const meta = {
   title: 'entities/Profile/ProfileCard',
   component: ProfileCard,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

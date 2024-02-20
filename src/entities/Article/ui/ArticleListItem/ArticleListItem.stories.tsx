@@ -68,7 +68,7 @@ const meta = {
   title: 'entities/Article/ArticleListItem',
   component: ArticleListItem,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

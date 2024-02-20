@@ -7,7 +7,7 @@ const meta = {
   title: 'shared/Button',
   component: Button,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

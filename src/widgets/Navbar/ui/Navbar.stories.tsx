@@ -8,7 +8,7 @@ const meta = {
   title: 'widgets/Navbar',
   component: Navbar,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

@@ -7,7 +7,7 @@ const meta = {
   title: 'entities/Comment/CommentCard',
   component: CommentCard,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

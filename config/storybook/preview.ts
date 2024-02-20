@@ -16,6 +16,7 @@ const preview: Preview = {
         date: /Date$/
       }
     },
+    layout: 'fullscreen',
     i18n
   },
   globals: {

@@ -7,7 +7,7 @@ const meta = {
   title: 'entities/Comment/CommentList',
   component: CommentList,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

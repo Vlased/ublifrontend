@@ -5,7 +5,7 @@ const meta = {
   title: 'shared/Stack/Flex',
   component: Flex,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

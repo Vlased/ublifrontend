@@ -60,7 +60,7 @@ const meta = {
   title: 'features/ArticleRecommendationsList',
   component: ArticleRecommendationsList,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

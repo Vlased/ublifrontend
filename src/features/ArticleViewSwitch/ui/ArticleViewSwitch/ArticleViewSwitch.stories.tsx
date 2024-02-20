@@ -8,7 +8,7 @@ const meta = {
   title: 'features/ArticleViewSwitch',
   component: ArticleViewSwitch,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

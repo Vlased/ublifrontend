@@ -7,7 +7,7 @@ const meta = {
   title: 'shared/Modal',
   component: Modal,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

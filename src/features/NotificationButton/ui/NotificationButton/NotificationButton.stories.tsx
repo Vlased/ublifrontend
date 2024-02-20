@@ -5,7 +5,7 @@ const meta = {
   title: 'features/NotificationButton',
   component: NotificationButton,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

@@ -8,7 +8,7 @@ const meta = {
   title: 'shared/Popups/Popover',
   component: Popover,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

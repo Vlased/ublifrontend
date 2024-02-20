@@ -5,7 +5,7 @@ const meta = {
   title: 'entities/Currency/CurrencySelect',
   component: CurrencySelect,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

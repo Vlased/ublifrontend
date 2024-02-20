@@ -7,7 +7,7 @@ const meta = {
   title: 'pages/ForbiddenPage',
   component: ForbiddenPage,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {

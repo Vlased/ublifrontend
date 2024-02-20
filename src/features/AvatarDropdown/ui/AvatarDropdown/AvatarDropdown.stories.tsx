@@ -6,7 +6,7 @@ const meta = {
   title: 'features/AvatarDropdown',
   component: AvatarDropdown,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   argTypes: {
