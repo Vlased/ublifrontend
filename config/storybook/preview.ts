@@ -17,6 +17,14 @@ const preview: Preview = {
       }
     },
     layout: 'fullscreen',
+    themes: {
+      default: 'dark',
+      list: [
+        { name: 'light', class: Theme.LIGHT, color: '#f5faf6' },
+        { name: 'dark', class: Theme.DARK, color: '#2233c9' },
+        { name: 'orange', class: Theme.ORANGE, color: '#e37724' }
+      ]
+    },
     i18n
   },
   globals: {
@@ -28,7 +36,7 @@ const preview: Preview = {
   },
   decorators: [
     StyleDecorator,
-    ThemeDecorator(Theme.LIGHT),
+    // ThemeDecorator(Theme.LIGHT),
     ReduxDecorator(),
     RouterDecorator,
     SuspenseDecorator
