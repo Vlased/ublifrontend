@@ -1,4 +1,4 @@
-import { RoutePath } from '@/shared/constants/router'
+import { getRouteProfile } from '@/shared/constants/router'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { AppLink } from '@/shared/ui/AppLink'
 import { Avatar } from '@/shared/ui/Avatar'
@@ -40,7 +40,7 @@ const CommentCard: FC<CommentCardProps> = memo(({ className, comment, isLoading 
 
   return (
     <div className={classNames([styles.commentCard, className])}>
-      <AppLink to={`${RoutePath.profile}${comment.user.id}`} className={styles.header}>
+      <AppLink to={getRouteProfile(comment.user.id)} className={styles.header}>
         {comment.user.avatar && (
           <Avatar
             size={30}

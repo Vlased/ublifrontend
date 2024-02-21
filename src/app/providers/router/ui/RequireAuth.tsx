@@ -1,5 +1,5 @@
 import { getAuthData, getUserRoles } from '@/entities/User'
-import { RoutePath } from '@/shared/constants/router'
+import { getRouteForbiddenPage, getRouteMain } from '@/shared/constants/router'
 import { UserRoles } from '@/shared/constants/userRoles'
 import { FC, ReactNode, useMemo } from 'react'
 import { useSelector } from 'react-redux'
@@ -25,13 +25,13 @@ const RequireAuth: FC<RequireAuthProps> = ({ children, roles }) => {
 
   if (!auth) {
     return (
-      <Navigate to={RoutePath.main} state={{ from: location }} replace />
+      <Navigate to={getRouteMain()} state={{ from: location }} replace />
     )
   }
 
   if (!hasRequiredRole) {
     return (
-      <Navigate to={RoutePath.forbidden} state={{ from: location }} replace />
+      <Navigate to={getRouteForbiddenPage()} state={{ from: location }} replace />
     )
   }
 

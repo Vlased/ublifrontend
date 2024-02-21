@@ -1,5 +1,5 @@
 import EyeIcon from '@/shared/assets/icons/eye_icon.svg'
-import { RoutePath } from '@/shared/constants/router'
+import { getRouteArticleDetails } from '@/shared/constants/router'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { AppLink } from '@/shared/ui/AppLink'
 import { Avatar } from '@/shared/ui/Avatar'
@@ -82,7 +82,7 @@ const ArticleListItem: FC<ArticleListItemProps> = ({ className, article, view, t
           )}
           <div className={styles.footer}>
             <AppLink
-              to={`${RoutePath.article_details}${article.id}`}
+              to={getRouteArticleDetails(article.id)}
               target={target}
             >
               <Button>
@@ -99,7 +99,7 @@ const ArticleListItem: FC<ArticleListItemProps> = ({ className, article, view, t
   return (
     <AppLink
       className={classNames([styles[view], className])}
-      to={`${RoutePath.article_details}${article.id}`}
+      to={getRouteArticleDetails(article.id)}
       target={target}
     >
       <Card>

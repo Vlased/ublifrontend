@@ -1,5 +1,5 @@
 import { getArticleDetailsData } from '@/entities/Article'
-import { RoutePath } from '@/shared/constants/router'
+import { getRouteArticleEdit, getRouteArticles } from '@/shared/constants/router'
 import { Button } from '@/shared/ui/Button'
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -15,11 +15,11 @@ const ArticleDetailsPageHeader = () => {
   const article = useSelector(getArticleDetailsData)
 
   const handleBackToList = useCallback(() => {
-    navigate(RoutePath.articles)
+    navigate(getRouteArticles())
   }, [navigate])
 
   const handleEditArticle = useCallback(() => {
-    navigate(`${RoutePath.article_details}${article?.id}/edit`)
+    navigate(getRouteArticleEdit(article?.id))
   }, [navigate, article?.id])
 
   return (
