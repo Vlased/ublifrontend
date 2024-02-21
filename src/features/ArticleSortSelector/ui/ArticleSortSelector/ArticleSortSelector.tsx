@@ -1,4 +1,4 @@
-import { ArticleSortField } from '../../model/const/const'
+import { ArticleSortField } from '@/entities/Article'
 import { FC, memo, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { SortOrder } from '@/shared/types/sortingTypes'
@@ -12,7 +12,7 @@ interface ArticleSortSelectorProps {
   handleOrderChange: (newOrder: SortOrder) => void
 }
 
-const ArticleSortSelector: FC<ArticleSortSelectorProps> = memo(({
+export const ArticleSortSelector: FC<ArticleSortSelectorProps> = memo(({
   sort,
   order,
   handleSortChange,
@@ -65,5 +65,3 @@ const ArticleSortSelector: FC<ArticleSortSelectorProps> = memo(({
     </HStack>
   )
 })
-
-export default ArticleSortSelector
