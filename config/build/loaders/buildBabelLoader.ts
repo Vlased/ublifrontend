@@ -2,15 +2,17 @@ import babelRemovePropsPlugin from '../../babel/babelRemovePropsPlugin'
 import type webpack from 'webpack'
 
 interface BuildBabelLoaderOptions {
+  isDev?: boolean
   isTsx?: boolean
 }
 
-export const buildBabelLoader = ({ isTsx }: BuildBabelLoaderOptions = {}): webpack.RuleSetRule => ({
+export const buildBabelLoader = ({ isDev, isTsx }: BuildBabelLoaderOptions = {}): webpack.RuleSetRule => ({
   test: isTsx ? /\.(jsx|tsx)$/ : /\.(js|ts)$/,
   exclude: /node_modules/,
   use: {
     loader: 'babel-loader',
     options: {
+      cacheDirectory: true,
       presets: ['@babel/preset-env'],
       plugins: [
         [
@@ -20,7 +22,7 @@ export const buildBabelLoader = ({ isTsx }: BuildBabelLoaderOptions = {}): webpa
           }
         ],
         '@babel/plugin-transform-runtime',
-        isTsx && [
+        isTsx && !isDev && [
           babelRemovePropsPlugin,
           {
             props: ['data-testid']

@@ -16,8 +16,8 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
     ]
   }
 
-  const codeBabelLoader = buildBabelLoader()
-  const tsxCodeBabelLoader = buildBabelLoader({ isTsx: true })
+  const codeBabelLoader = buildBabelLoader({ isDev })
+  const tsxCodeBabelLoader = buildBabelLoader({ isDev, isTsx: true })
 
   const scssLoader = buildScssLoader(isDev)
 
