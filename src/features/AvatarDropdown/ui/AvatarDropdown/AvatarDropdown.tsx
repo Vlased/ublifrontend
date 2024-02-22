@@ -30,6 +30,7 @@ export const AvatarDropdown = memo(() => {
           size={30}
           src={authData?.avatar}
           alt="User avatar"
+          fallbackInverted
         />
       }
       items={[

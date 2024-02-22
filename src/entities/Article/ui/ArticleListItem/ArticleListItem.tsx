@@ -1,11 +1,13 @@
 import EyeIcon from '@/shared/assets/icons/eye_icon.svg'
 import { getRouteArticleDetails } from '@/shared/constants/router'
 import { classNames } from '@/shared/lib/classNames/classNames'
+import { AppImage } from '@/shared/ui/AppImage'
 import { AppLink } from '@/shared/ui/AppLink'
 import { Avatar } from '@/shared/ui/Avatar'
 import { Button } from '@/shared/ui/Button'
 import { Card } from '@/shared/ui/Card'
 import { Icon } from '@/shared/ui/Icon'
+import { Skeleton } from '@/shared/ui/Skeleton'
 import { Text } from '@/shared/ui/Text'
 import { FC, HTMLAttributeAnchorTarget } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -43,10 +45,17 @@ const ArticleListItem: FC<ArticleListItemProps> = ({ className, article, view, t
   )
 
   const image = (
-    <img
+    <AppImage
       src={article.image}
       alt={article.title}
       className={styles.image}
+      loadingFallback={
+        <Skeleton
+          width="100%"
+          height={250}
+          className={styles.image}
+        />
+      }
     />
   )
 
