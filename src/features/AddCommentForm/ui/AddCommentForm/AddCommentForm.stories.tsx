@@ -1,7 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/shared/constants/theme'
 import { ReduxDecorator } from '@/shared/config/storybook/decorators/ReduxDecorator'
-import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
+import type { Meta, StoryObj } from '@storybook/react'
 import { AddCommentFormAsync as AddCommentForm } from './AddCommentForm.async'
 
 const meta = {
@@ -31,18 +29,3 @@ Light.decorators = [ReduxDecorator({
     text: 'abababa'
   }
 })]
-
-export const Dark: Story = {
-  args: {
-    handleCommentSend: () => {}
-  }
-}
-
-Dark.decorators = [
-  ThemeDecorator(Theme.DARK),
-  ReduxDecorator({
-    addCommentForm: {
-      text: 'abababa'
-    }
-  })
-]

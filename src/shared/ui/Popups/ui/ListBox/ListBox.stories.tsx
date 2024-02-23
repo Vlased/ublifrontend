@@ -1,8 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/shared/constants/theme'
-import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
-import { ListBox, ListBoxItem } from './ListBox'
 import { Currency } from '@/shared/constants/currency'
+import type { Meta, StoryObj } from '@storybook/react'
+import { ListBox, ListBoxItem } from './ListBox'
 
 const currencyOptions: ListBoxItem[] = [
   {
@@ -42,13 +40,3 @@ export const Primary: Story = {
     onChange: () => null
   }
 }
-
-export const PrimaryDark: Story = {
-  args: {
-    defaultValue: 'Select Currency',
-    items: currencyOptions,
-    onChange: () => null
-  }
-}
-
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]

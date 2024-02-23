@@ -1,5 +1,4 @@
 **/node_modules
-**/.loki
 **/reports
 /build
 package-lock.json

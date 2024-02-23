@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/shared/constants/theme'
-import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
 import { Input } from './Input'
 
 const meta = {
@@ -25,11 +23,3 @@ export const Primary: Story = {
     autoFocus: true
   }
 }
-
-export const PrimaryDark: Story = {
-  args: {
-    placeholder: 'Text'
-  }
-}
-
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]

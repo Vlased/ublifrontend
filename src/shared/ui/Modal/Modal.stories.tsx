@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/shared/constants/theme'
-import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
 import { Modal } from './Modal'
 
 const meta = {
@@ -30,17 +28,3 @@ export const Primary: Story = {
     kashkjdhlkaskldhasklldkhd`
   }
 }
-
-export const PrimaryDark: Story = {
-  args: {
-    disablePortal: true,
-    isOpen: true,
-    children: `asdjhjkashdlhasjkhdkjhaslkhd
-    aisjhdlasldjasdlkjaslkdjlasjkldjlkasjd
-    akjsdlkjaskldjklasbdbajsbcjhasljigvdjhkfbsljka
-    dhiuhasbkdnlakshdkjasbkjdnlkasjhkjdbasjkndl
-    kashkjdhlkaskldhasklldkhd`
-  }
-}
-
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]

@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/shared/constants/theme'
-import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
 import { Button, ButtonTheme } from '../../../Button/Button'
 import { Popover } from './Popover'
 
@@ -30,16 +28,3 @@ export const Primary: Story = {
     children: 'Another text'
   }
 }
-
-export const PrimaryDark: Story = {
-  args: {
-    trigger: (
-      <Button theme={ButtonTheme.CLEAR}>
-        Text
-      </Button>
-    ),
-    children: 'Another text'
-  }
-}
-
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]

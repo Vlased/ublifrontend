@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/shared/constants/theme'
-import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
 import { Code } from './Code'
 
 const meta = {
@@ -24,11 +22,3 @@ export const Primary: Story = {
     children: "var http = require('http');\nhttp.createServer(function (req, res) {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello World!');\n}).listen(8080);"
   }
 }
-
-export const PrimaryDark: Story = {
-  args: {
-    children: "var http = require('http');\nhttp.createServer(function (req, res) {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello World!');\n}).listen(8080);"
-  }
-}
-
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]

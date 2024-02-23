@@ -1,9 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
+import { ArticleView } from '../../model/const/const'
 import { Article } from '../../model/types/article'
 import ArticleListItem from './ArticleListItem'
-import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
-import { ArticleView } from '../../model/const/const'
-import { Theme } from '@/shared/constants/theme'
 
 const article = {
   id: '1',
@@ -87,25 +85,8 @@ export const PrimaryList: Story = {
   }
 }
 
-export const DarkList: Story = {
-  args: {
-    article,
-    view: ArticleView.LIST
-  }
-}
-
-DarkList.decorators = [ThemeDecorator(Theme.DARK)]
-
 export const PrimaryGrid: Story = {
   args: {
     article
   }
 }
-
-export const DarkGrid: Story = {
-  args: {
-    article
-  }
-}
-
-DarkGrid.decorators = [ThemeDecorator(Theme.DARK)]

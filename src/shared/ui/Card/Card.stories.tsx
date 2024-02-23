@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/shared/constants/theme'
-import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
 import { Card } from './Card'
 
 const meta = {
@@ -31,18 +29,3 @@ export const Primary: Story = {
     )
   }
 }
-
-export const PrimaryDark: Story = {
-  args: {
-    children: (
-      <>
-        <div>some guffy text goin her</div>
-        <div>some guffy text goin her</div>
-        <div>some guffy text goin her</div>
-        <div>some guffy text goin her</div>
-      </>
-    )
-  }
-}
-
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]

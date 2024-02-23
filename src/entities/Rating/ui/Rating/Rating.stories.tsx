@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/shared/constants/theme'
-import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
 import { Rating } from './Rating'
 
 const meta = {
@@ -26,13 +24,3 @@ export const Primary: Story = {
     hasFeedback: true
   }
 }
-
-export const PrimaryDark: Story = {
-  args: {
-    title: 'Rate this article',
-    feedbackTitle: 'Type your feedback on this article',
-    hasFeedback: true
-  }
-}
-
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]

@@ -1,7 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/shared/constants/theme'
 import { ReduxDecorator } from '@/shared/config/storybook/decorators/ReduxDecorator'
-import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
+import type { Meta, StoryObj } from '@storybook/react'
 import LoginForm from './LoginForm'
 
 const meta = {
@@ -23,12 +21,6 @@ type Story = StoryObj<typeof meta>
 export const Primary: Story = {
   args: {}
 }
-
-export const PrimaryDark: Story = {
-  args: {}
-}
-
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]
 
 export const PrimaryWithError: Story = {
   args: {}

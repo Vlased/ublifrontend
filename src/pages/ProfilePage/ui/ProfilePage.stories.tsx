@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/shared/constants/theme'
 import { ReduxDecorator } from '@/shared/config/storybook/decorators/ReduxDecorator'
-import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
 import { ProfilePageAsync as ProfilePage } from './ProfilePage.async'
 import { Currency } from '@/shared/constants/currency'
 import { Country } from '@/shared/constants/country'
@@ -40,25 +38,3 @@ Light.decorators = [ReduxDecorator({
     }
   }
 })]
-
-export const Dark: Story = {
-  args: {}
-}
-
-Dark.decorators = [
-  ThemeDecorator(Theme.DARK),
-  ReduxDecorator({
-    profile: {
-      form: {
-        firstName: 'firstName',
-        lastName: 'lastName',
-        age: 12,
-        currency: Currency.UAH,
-        country: Country.Ukraine,
-        city: 'city',
-        username: 'username',
-        avatar: 'https://www.w3schools.com/w3css/img_avatar3.png'
-      }
-    }
-  })
-]

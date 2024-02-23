@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/shared/constants/theme'
-import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
 import { StarRating } from './StarRating'
 
 const meta = {
@@ -23,22 +21,8 @@ export const Primary: Story = {
   args: {}
 }
 
-export const PrimaryDark: Story = {
-  args: {}
-}
-
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]
-
 export const AlreadySelected: Story = {
   args: {
     selectedStars: 3
   }
 }
-
-export const AlreadySelectedDark: Story = {
-  args: {
-    selectedStars: 3
-  }
-}
-
-AlreadySelectedDark.decorators = [ThemeDecorator(Theme.DARK)]

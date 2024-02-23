@@ -1,7 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/shared/constants/theme'
-import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
 import { Article, ArticleBlockType, ArticleType } from '@/entities/Article'
+import type { Meta, StoryObj } from '@storybook/react'
 import { ArticleRecommendationsList } from './ArticleRecommendationsList'
 
 const article: Article = {
@@ -90,24 +88,3 @@ export const Light: Story = {
     ]
   }
 }
-
-export const Dark: Story = {
-  args: {},
-  parameters: {
-    mockData: [
-      {
-        url: `${API}/articles?_limit=4`,
-        method: 'GET',
-        status: 200,
-        response: [
-          { ...article },
-          { ...article, id: '2' },
-          { ...article, id: '3' },
-          { ...article, id: '4' }
-        ]
-      }
-    ]
-  }
-}
-
-Dark.decorators = [ThemeDecorator(Theme.DARK)]

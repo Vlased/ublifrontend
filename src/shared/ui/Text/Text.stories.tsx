@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/shared/constants/theme'
-import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
 import { Text, TextSize, TextTheme } from './Text'
 
 const meta = {
@@ -46,15 +44,6 @@ export const OnlyText: Story = {
   }
 }
 
-export const PrimaryDark: Story = {
-  args: {
-    title: 'Title',
-    children: 'Text'
-  }
-}
-
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]
-
 export const TextS: Story = {
   args: {
     children: 'Text',
@@ -62,16 +51,6 @@ export const TextS: Story = {
     size: TextSize.S
   }
 }
-
-export const TextSDark: Story = {
-  args: {
-    children: 'Text',
-    title: 'Title',
-    size: TextSize.S
-  }
-}
-
-TextSDark.decorators = [ThemeDecorator(Theme.DARK)]
 
 export const TextM: Story = {
   args: {
@@ -81,16 +60,6 @@ export const TextM: Story = {
   }
 }
 
-export const TextMDark: Story = {
-  args: {
-    children: 'Text',
-    title: 'Title',
-    size: TextSize.M
-  }
-}
-
-TextMDark.decorators = [ThemeDecorator(Theme.DARK)]
-
 export const TextL: Story = {
   args: {
     children: 'Text',
@@ -98,29 +67,3 @@ export const TextL: Story = {
     size: TextSize.L
   }
 }
-
-export const TextLDark: Story = {
-  args: {
-    children: 'Text',
-    title: 'Title',
-    size: TextSize.L
-  }
-}
-
-TextLDark.decorators = [ThemeDecorator(Theme.DARK)]
-
-export const OnlyTitleDark: Story = {
-  args: {
-    title: 'Title'
-  }
-}
-
-OnlyTitleDark.decorators = [ThemeDecorator(Theme.DARK)]
-
-export const OnlyTextDark: Story = {
-  args: {
-    children: 'Text'
-  }
-}
-
-OnlyTextDark.decorators = [ThemeDecorator(Theme.DARK)]

@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/shared/constants/theme'
-import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
 import { Tabs } from './Tabs'
 
 const tabs = [
@@ -41,13 +39,3 @@ export const Primary: Story = {
     handleTabClick: () => null
   }
 }
-
-export const PrimaryDark: Story = {
-  args: {
-    tabs,
-    value: 'tab2',
-    handleTabClick: () => null
-  }
-}
-
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]

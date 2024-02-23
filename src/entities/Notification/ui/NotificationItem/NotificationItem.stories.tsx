@@ -1,6 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/shared/constants/theme'
-import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
 
 import { NotificationItem } from './NotificationItem'
 
@@ -32,11 +30,3 @@ export const Primary: Story = {
     item
   }
 }
-
-export const PrimaryDark: Story = {
-  args: {
-    item
-  }
-}
-
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]

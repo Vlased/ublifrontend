@@ -1,9 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Theme } from '@/shared/constants/theme'
-import { Article, ArticleType, ArticleBlockType } from '@/entities/Article'
-import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
-import { ArticleDetailsPageAsync as ArticleDetailsPage } from './ArticleDetailsPage.async'
+import { Article, ArticleBlockType, ArticleType } from '@/entities/Article'
 import { ReduxDecorator } from '@/shared/config/storybook/decorators/ReduxDecorator'
+import type { Meta, StoryObj } from '@storybook/react'
+import { ArticleDetailsPageAsync as ArticleDetailsPage } from './ArticleDetailsPage.async'
 
 const article: Article = {
   id: '1',
@@ -83,17 +81,4 @@ Light.decorators = [
       data: article
     }
   })
-]
-
-export const Dark: Story = {
-  args: {}
-}
-
-Dark.decorators = [
-  ReduxDecorator({
-    articleDetails: {
-      data: article
-    }
-  }),
-  ThemeDecorator(Theme.DARK)
 ]
