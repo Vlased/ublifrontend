@@ -1,6 +1,7 @@
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { TestProps } from '@/shared/types/testing'
 import { FC, memo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { classNames } from '@/shared/lib/classNames/classNames'
 import styles from './Text.module.scss'
 
 export enum TextTheme {
@@ -21,14 +22,13 @@ export enum TextSize {
   L = 'size_l',
 }
 
-interface TextProps {
+interface TextProps extends TestProps {
   className?: string
   title?: string | number
   children?: string | number
   theme?: TextTheme
   align?: TextAlign
   size?: TextSize
-  'data-testid'?: string
 }
 
 type HeaderTagType = 'h1' | 'h2' | 'h3'
